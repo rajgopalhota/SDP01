@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="/static/styles/style.css">
+</head>
+<body>
+    <div class="container">
+            <h1>Enter Details</h1>
+        <form method="POST" action="">
+            {% csrf_token %}
+            <div class="box">
+            First Name:<input type="text" class="in_box" name="fname" required="">
+        </div>
+            <div class="box">
+            Last Name:<input type="text" class="in_box" name="lname" required="">
+        </div>
+            <div class="box">
+            Username:<input type="text" class="in_box" name="username" required="">
+        </div>
+            <div class="box">
+            Email id:<input type="email" class="in_box" name="mail" required="">
+        </div>
+            <div class="box">
+            Enter Password:<input type="password" class="in_box" name="password1" required="">
+        </div>
+            <div class="box">
+            Re-enter Password:<input type="password" class="in_box" name="password2" required="">
+        </div>
+            <button class="btn" type="submit">Register</button>
+        </form>
+    </div>
+    <div class="quotes">
+        <h1>“Jobs fill your pockets,<br>travelling fill your soul.”</h1>
+    </div>
+    <div class="quotes1">
+        <h1>“Travel is an <br>investment in yourself.”</h1>
+    </div>
+    <div class="quotes2">
+        <h1>“Thinking to book a cab<br>
+            Join to avail an offer”</h1>
+    </div>
+</body>
+</html>

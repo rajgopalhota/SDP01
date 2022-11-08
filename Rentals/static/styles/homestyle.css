@@ -1,0 +1,717 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+html {
+    box-sizing: border-box;
+  scroll-behavior: smooth;
+ }
+#myHeader{
+  /* position: fixed; */
+  box-shadow: 0 0 22px rgb(82, 174, 240);
+  width: 100%;
+  height: 65px;
+  padding: 12px 16px;
+  z-index: 999; /*Content goes under header */
+}
+#myHeader:hover{
+  box-shadow: 0 0 32px rgba(255, 161, 30, 0.836);
+}
+body{
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  background: url(/static/styles/Images&Gifs/rt5.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.navbar-brand img{
+    width: 90px;
+    padding: 12px 9px;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 23px;
+    background-color: rgba(255, 224, 68, 0.854);
+    border-radius: 50px;
+    border: 2px solid rgba(0, 163, 46, 0.906);
+}
+.navbar li:hover{
+  box-shadow: 0 0 34px #15f7a1;
+    background-color: rgb(81, 130, 176);
+    border: 3px solid rgba(255, 255, 255, 0.906);
+}
+.navbar li a:hover{
+    color: aliceblue;
+    background-color: transparent;
+    padding:4px 15px;
+    text-decoration: underline;
+}
+.navbar li a{
+  text-decoration: none;
+  padding: 5px 12px;
+}
+.btn{
+    color: white;
+    font-size: 16;
+    background: none;
+    cursor: pointer;
+    width: 45%;
+    padding: 8px 14px;
+    border-radius: 100px;
+    border: 3px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.btn:hover{
+    padding: 10px 12px;
+    color: rgb(87, 255, 235);
+    background: rgb(208, 52, 255);
+    outline: none;
+}
+
+
+
+
+
+
+
+.typedown{
+  
+  font-weight: bolder;
+  background-color: rgba(55, 180, 252, 0.126);
+  border: none;
+  color: rgb(0, 0, 0);
+  position : relative;
+  left: 12%;
+  width: 62%;
+  padding: 6px 18px;
+}
+.typedown:hover{
+  box-shadow: 0 0 34px #19e9f4;
+}
+/* Booking Table */
+.cust_book{
+  font-weight: bold;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 60px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 36%;
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+.cust_book:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.cust_book h1{
+    font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.cust_book h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+    font-size: 42px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(245, 177, 245);
+}
+.box{
+    padding: 2px;
+    margin:12px 0px;
+    width: 100%;
+    border-bottom: 2px solid rgb(245, 183, 26);
+}
+.box:hover{
+    box-shadow: 0 0 24px #13daf4;
+    border-bottom: 3px solid rgb(3, 222, 247);
+}
+.box input{
+    background: none;
+    font-size: 20px;
+    width: 65%;
+    outline: none;
+    border: none;
+    color: rgb(255, 228, 212);
+    padding: 5px 10px;
+
+}
+.box i{
+    padding: 0 12px;
+    width: 25px;
+    text-align: center;
+}
+
+.cust_btn{
+    position: absolute;
+    top: 86%;
+    left: 35%;
+    color: white;
+    font-size: 22;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    margin: 12px 0;
+    padding: 6px;
+    border-radius: 90px;
+    border: 2px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.cust_btn img{
+    position:absolute;
+    left: 7%;
+    top: 8%;
+    width: 30px;
+    padding: 1px;
+}
+.cust_btn:hover{
+  box-shadow: 0 0 34px #b113f4;
+    color: rgb(169, 0, 169);
+    background: rgb(219, 193, 228);
+    outline: none;
+}
+
+
+/* Book Now */
+.cust_book1{
+  box-shadow: 0 0 14px #39d2f8;
+  font-weight: bolder;
+  width: 36%;
+    height: 72%;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 68px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+.cust_book1:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.cust_book1 h1{
+  font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.cust_book1 h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+  font-size: 42px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(245, 177, 245);
+}
+.cust_bn{
+    position: absolute;
+    top: 83%;
+    left: 35%;
+    color: white;
+    font-size: 22;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    margin: 12px 0;
+    padding: 6px;
+    border-radius: 90px;
+    border: 2px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.cust_bn img{
+    position:absolute;
+    left: 7%;
+    top: 8%;
+    width: 30px;
+    padding: 1px;
+}
+.cust_bn:hover{
+  box-shadow: 0 0 34px #b113f4;
+    color: rgb(169, 0, 169);
+    background: rgb(219, 193, 228);
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.footer-dark {
+  width: 100%;
+  height: 1%;
+    position: absolute;
+    top: 0%;
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32f4;
+    
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:38px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:#fff;
+    opacity:0.8;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:1;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+#icosoc img{
+  width: 38px;
+  padding: 0px 2px;
+  border-radius: 24px;
+}
+#icosoc img:hover{
+  width: 46px;
+  padding: 0px 2px;
+  border: 2px rgb(87, 184, 240);
+  box-shadow: 0 0 32px rgb(87, 184, 240);
+}
+
+
+
+  #down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 
+
+
+
+
+
+   /* CARS */
+
+   .micro{
+    
+    padding: 12px;
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(82, 148, 210, 0.703);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .micro:hover{
+    transition: all .25s ease-in-out;
+    box-shadow: 0 0 32px rgb(43, 114, 219);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .micro h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .micro li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #0095ffbb;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .micro h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .micropic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+
+   .suv{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(224, 155, 59, 0.532);
+    position: absolute;
+    top: 64%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .suv li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #ff9d00ec;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .suv:hover{
+    box-shadow: 0 0 32px rgba(251, 150, 9, 0.788);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .suv h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .suv h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .suvpic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .sedan{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(82, 148, 210, 0.703);
+    position: absolute;
+    top: 112%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .sedan li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #0095ffbb;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .sedan:hover{
+    box-shadow: 0 0 32px rgb(43, 114, 219);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .sedan h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .sedan h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .sedanpic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .limosine{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(224, 155, 59, 0.532);
+    position: absolute;
+    top: 160%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .limosine li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #ff9d00ec;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .limosine:hover{
+    box-shadow: 0 0 32px rgba(251, 150, 9, 0.788);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .limosine h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .limosine h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .limosinepic{
+    width: 35%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .homemini{
+    border: 2px solid black;
+    padding: 4px;
+    width: 35px;
+    border-radius: 20px;
+    position: absolute;
+    left: 96%;
+   }
+   .homemin{
+    border: 2px solid black;
+    padding: 4px;
+    width: 35px;
+    border-radius: 20px;
+    position: absolute;
+    left: 90%;
+    top: 2%;
+   }
+.homemini:hover{
+  box-shadow: 0 0 44px #ff8000;
+}
+.homemin:hover{
+  box-shadow: 0 0 44px #ff3c00;
+}
+
+
+
+.specsofcar{
+  position: absolute;
+  top: 85%;
+}
+
+.notesmicro{
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  display: inline;
+  width: 72%;
+  font-size: 20px;
+  padding: 12px;
+  color: #f0f9ff;
+  font-weight: bold;
+}
+.noteslimo{
+  position: absolute;
+  top: 18%;
+  left: 38%;
+  display: inline;
+  width: 52%;
+  font-size: 20px;
+  padding: 12px;
+  color: #f0f9ff;
+  font-weight: bold;
+}
+.price{
+  box-shadow: 0 0 16px rgb(58, 236, 165);
+  display: inline;
+  border-radius: 12px;
+  position: absolute;
+  top: 61%;
+  left: 42%;
+  background-color: rgba(238, 255, 0, 0.849);
+  width: 10%;
+  font-size: 20px;
+  padding: 6px 10px;
+  color: #172c3a;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.858);
+}
+.pricelimo{
+  box-shadow: 0 0 16px rgb(58, 236, 165);
+  display: inline;
+  border-radius: 12px;
+  position: absolute;
+  top: 61%;
+  left: 82%;
+  background-color: rgba(238, 255, 0, 0.849);
+  width: 10%;
+  font-size: 20px;
+  padding: 6px 10px;
+  color: #172c3a;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.858);
+}
+
+
+.historytable{
+  box-shadow: 0 0 14px #39d2f8;
+  font-weight: bolder;
+  width: 60%;
+    font-size: 20px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    padding: 68px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: absolute;
+    top: 18%;
+    left: 22%;
+}
+.historytable:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.historytable h1{
+  font-weight: bold;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.historytable h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(245, 177, 245);
+}
+
+table {
+  text-transform: uppercase;
+  color: aliceblue;
+  font-weight: bold;
+  text-align: center;
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  box-shadow: 0 0 12px #126091cf;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #5abdff;
+  padding: 8px;
+}
+th {
+  box-shadow: 0 0 22px #126091cf;
+  text-decoration: underline;
+  border: 3px solid #5abdff;
+  padding: 8px;
+}
+th:hover{
+  color: #072358;
+  cursor: pointer;
+}
+
+tr:nth-child(odd) {
+  background-color: #3aceff5b;
+  box-shadow: 0 0 12px #3aceff5b;
+}
+
+#popupmsg{
+  border-radius: 42px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 3px solid rgba(254, 201, 28, 0.863);
+  box-shadow: 0 0 32px rgba(240, 154, 34, 0.806);
+}
