@@ -163,7 +163,7 @@ body{
     border: 3px solid rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 640px)
+@media screen and (max-width: 480px)
 {
     .quotes{
         position: absolute;

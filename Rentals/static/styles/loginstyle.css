@@ -206,11 +206,11 @@ body{
     border: 3px solid rgb(255, 255, 255);
 }
 
-@media screen and (max-width: 640px)
+@media screen and (max-width: 480px)
 {
     .container{
         width: 85%;
-        height: 36%;
+        height: 40%;
         position: absolute;
         top: 33%;
         left: 0%;
