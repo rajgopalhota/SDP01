@@ -1,1 +1,1 @@
-web: gunicorn Rentals.wsgi
+web: gunicorn SDP.wsgi
