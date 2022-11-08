@@ -258,9 +258,9 @@ body{
 /* Footer */
 .footer-dark {
   width: 100%;
-  height: 1%;
+  height: 70%;
+  top: auto;
     position: absolute;
-    top: 0%;
     padding:50px 0;
     color:#f0f9ff;
     background-color:#282d32f4;
@@ -714,4 +714,127 @@ tr:nth-child(odd) {
   justify-content: center;
   border: 3px solid rgba(254, 201, 28, 0.863);
   box-shadow: 0 0 32px rgba(240, 154, 34, 0.806);
+}
+
+
+
+/* Responsiveness */
+@media screen and (max-width: 640px)
+{
+  #myHeader{
+    width: 100%;
+    height: 100px;
+  }
+  .footer-dark {
+    width: 100%;
+    height: 90%;
+    top: 280%;
+    }
+    .micro{
+      top: 20%;
+      width: 85%;
+      height: 68%;
+     }
+     .micro li{
+      box-shadow: 0 0 32px #ffffffec;
+      background-color: #0095ffbb;
+      margin: 8px;
+      border-radius: 22px;
+      border: 2px solid white;
+      padding: 0px 12px;
+      display: inline;
+      font-size: 18px;
+      color: #ffffff;
+     }
+     .micropic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suvpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .limosinepic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .sedanpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suv{
+      top: 100%;
+      width: 85%;
+      height: 68%;
+     }
+     .sedan{
+      top: 180%;
+      width: 85%;
+      height: 68%;
+     }
+     .limosine{
+      top: 260%;
+      width: 85%;
+      height: 68%;
+     }
+     .specsofcar{
+      border-radius: 0%;
+      display:flow-root;
+      top: 75%;
+    }
+    .notesmicro{
+      position: absolute;
+      top: 13%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .noteslimo{
+      position: absolute;
+      top: 13%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .price{
+      top: 63%;
+      left: 39%;
+      width: 31%;
+    }
+    .pricelimo{
+      top: 60%;
+      left: 39%;
+      width: 31%;
+    }
+    .homemini{
+      left: 88%;
+     }
+     .homemin{
+      left: 90%;
+      top: 2%;
+     }
+     .cust_book{
+      height: 96%;
+      width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .cust_book1{
+        width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .historytable{
+      width: 97%;
+        top: 18%;
+        left: 2%;
+    }
 }

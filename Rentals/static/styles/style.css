@@ -162,3 +162,40 @@ body{
     left: 92%;
     border: 3px solid rgb(255, 255, 255);
 }
+
+@media screen and (max-width: 640px)
+{
+    .quotes{
+        position: absolute;
+        top: 1%;
+        left: 0%;
+        width: 25%;
+        height: 15%;
+    }
+    .quotes:hover{
+        font-size: 10px;
+    }
+    .quotes2:hover{
+        font-size: 10px;
+    }
+    .quotes1{
+        position: absolute;
+        top: 1%;
+        left: 33%;
+        width: 24%;
+        height: 15%;
+    }
+    .quotes2{
+        position: absolute;
+        top: 1%;
+        left: 65%;
+        width: 24%;
+        height: 15%;
+    }
+    .container{
+        font-size: 20px;
+        position: absolute;
+        top: 25%;
+        left: 0%;
+    }
+}
