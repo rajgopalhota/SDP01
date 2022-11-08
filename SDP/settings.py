@@ -12,7 +12,8 @@ https://docs.djangoproject.com/en/4.1/ref/settings/
 import os
 import django_heroku
 import dj_database_url
-from decouple import config
+from decouple import *
+import whitenoise
 from pathlib import Path
 from django.contrib.messages import constants as messages
 
@@ -83,10 +84,10 @@ WSGI_APPLICATION = 'SDP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd89hs42auvrb6n',
-        'USER': 'zxwdorauqoqfvr',
-        'PASSWORD': 'ee948b3f4f26e6164faed91b8df81af2b7578a2389949d227d0deae34026dea4',
-        'HOST':'ec2-3-227-68-43.compute-1.amazonaws.com',
+        'NAME': 'd39bln0ua59hm4',
+        'USER': 'wijyzzskdyyhyf',
+        'PASSWORD': '102263c5ad08ea988a8ebc524f65da9ead002248e76803ab38b0a9b2fc92e5f2',
+        'HOST':'ec2-44-194-117-205.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
@@ -125,9 +126,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
-
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = 'static/'
+STATIC_URL = '/static/'
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
