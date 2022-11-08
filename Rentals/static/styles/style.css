@@ -166,6 +166,7 @@ body{
 @media screen and (max-width: 480px)
 {
     .quotes{
+        font-size: 8px;
         position: absolute;
         top: 1%;
         left: 0%;
@@ -173,12 +174,13 @@ body{
         height: 15%;
     }
     .quotes:hover{
-        font-size: 10px;
+        font-size: 8px;
     }
     .quotes2:hover{
-        font-size: 10px;
+        font-size: 8px;
     }
     .quotes1{
+        font-size: 8px;
         position: absolute;
         top: 1%;
         left: 33%;
@@ -186,6 +188,7 @@ body{
         height: 15%;
     }
     .quotes2{
+        font-size: 8px;
         position: absolute;
         top: 1%;
         left: 65%;
@@ -197,5 +200,6 @@ body{
         position: absolute;
         top: 25%;
         left: 0%;
+        height: 86%;
     }
 }

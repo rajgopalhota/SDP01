@@ -728,12 +728,12 @@ tr:nth-child(odd) {
   .footer-dark {
     width: 100%;
     height: 90%;
-    top: 280%;
+    top: 380%;
     }
     .micro{
-      top: 20%;
+      top: 40%;
       width: 85%;
-      height: 68%;
+      height: 88%;
      }
      .micro li{
       box-shadow: 0 0 32px #ffffffec;
@@ -763,28 +763,28 @@ tr:nth-child(odd) {
       border-radius: 12px;
      }
      .suv{
-      top: 100%;
+      top: 140%;
       width: 85%;
-      height: 68%;
+      height: 88%;
      }
      .sedan{
-      top: 180%;
+      top: 240%;
       width: 85%;
-      height: 68%;
+      height: 88%;
      }
      .limosine{
-      top: 260%;
+      top: 340%;
       width: 85%;
-      height: 68%;
+      height: 88%;
      }
      .specsofcar{
       border-radius: 0%;
       display:flow-root;
-      top: 75%;
+      top: 72%;
     }
     .notesmicro{
       position: absolute;
-      top: 13%;
+      top: 6%;
       left: 2%;
       display: inline;
       width: 100%;
@@ -795,7 +795,7 @@ tr:nth-child(odd) {
     }
     .noteslimo{
       position: absolute;
-      top: 13%;
+      top: 7%;
       left: 2%;
       display: inline;
       width: 100%;
@@ -805,14 +805,14 @@ tr:nth-child(odd) {
       font-weight: bold;
     }
     .price{
-      top: 63%;
-      left: 39%;
-      width: 31%;
+      top: 64%;
+      left: 36%;
+      width: 42%;
     }
     .pricelimo{
       top: 60%;
-      left: 39%;
-      width: 31%;
+      left: 36%;
+      width: 42%;
     }
     .homemini{
       left: 88%;
@@ -822,7 +822,7 @@ tr:nth-child(odd) {
       top: 2%;
      }
      .cust_book{
-      height: 96%;
+      height: 98%;
       width: 96%;
         left: 2%;
         top: 18%;
