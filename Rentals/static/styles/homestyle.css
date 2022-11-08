@@ -837,4 +837,11 @@ tr:nth-child(odd) {
         top: 18%;
         left: 2%;
     }
+    .historytable{
+    width: 60%;
+    font-size: 12px;
+    position: absolute;
+    top: 18%;
+    left: 12%;
+}
 }
