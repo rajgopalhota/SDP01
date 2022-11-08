@@ -84,10 +84,10 @@ WSGI_APPLICATION = 'SDP.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd39bln0ua59hm4',
-        'USER': 'wijyzzskdyyhyf',
-        'PASSWORD': '102263c5ad08ea988a8ebc524f65da9ead002248e76803ab38b0a9b2fc92e5f2',
-        'HOST':'ec2-44-194-117-205.compute-1.amazonaws.com',
+        'NAME': 'd9btdra42h6pl9',
+        'USER': 'ijqmgwcfgrfyge',
+        'PASSWORD': '4361bf15c9c0765dd0d391cb091ca252128cdd3f43bda71bdd36286ce926138f',
+        'HOST':'ec2-44-195-132-31.compute-1.amazonaws.com',
         'PORT':'5432',
     }
 }
