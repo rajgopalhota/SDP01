@@ -260,3 +260,61 @@ body{
         color: rgb(0, 0, 0);
       }
 }
+
+
+@media screen and (max-width: 840px)
+{
+    .typewriter{
+        font-size: 19px;
+    }
+    .container{
+        width: 80%;
+        height: 50%;
+        position: absolute;
+        top: 33%;
+        left: 5%;
+    }
+    .btn{
+        top: 65%;
+        position: absolute;
+        left: 6%;
+        width: 80%;
+        height: 14%;
+        margin: 12px 0;
+        padding: 6px;
+        border-radius: 90px;
+        border: 2px solid rgb(245, 183, 26);
+        font-weight: bold;
+    }
+    .btn1{
+        position: absolute;
+        top: 80%;
+        left: 6%;
+        font-size: 22;
+        width: 80%;
+        height: 14%;
+    }
+    .btn1 img{
+            position:absolute;
+            left: 6%;
+            top: 10%;
+            width: 80px;
+            padding: 1px;
+    }
+    .forgot{
+        position: absolute;
+        top: 55%;
+        left:10%;
+        margin:12px 0px;
+        width: 120%;
+    }
+    #invLog{
+        display: flex;
+        font-size: 16px;
+    top: 35%;
+    left: 31%;
+    }
+    .typewriter h1 {
+        color: rgb(0, 0, 0);
+      }
+}

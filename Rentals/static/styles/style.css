@@ -207,3 +207,49 @@ body{
         left: 1%;
     }
 }
+
+
+@media screen and (max-width: 840px)
+{
+    .quotes{
+        font-size: 8px;
+        position: absolute;
+        top: 110%;
+        left: 0%;
+        width: 25%;
+        height: 15%;
+    }
+    .quotes:hover{
+        font-size: 8px;
+    }
+    .quotes2:hover{
+        font-size: 8px;
+    }
+    .quotes1{
+        font-size: 8px;
+        position: absolute;
+        top: 110%;
+        left: 33%;
+        width: 24%;
+        height: 15%;
+    }
+    .quotes2{
+        font-size: 8px;
+        position: absolute;
+        top: 110%;
+        left: 65%;
+        width: 24%;
+        height: 15%;
+    }
+    .container{
+        font-size: 20px;
+        position: absolute;
+        top: 16%;
+        left: 10%;
+        height: 69%;
+    }
+    #invLog{
+        top: 1%;
+        left: 1%;
+    }
+}

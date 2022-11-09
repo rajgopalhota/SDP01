@@ -2,6 +2,15 @@
     margin: 0;
     padding: 0;
 }
+.navbar-toggler-icon{
+  z-index: -1;
+  font-size: 46px;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgba(186, 189, 194, 0.84);
+  border: 2px solid white;
+  box-shadow: 0 0 22px aliceblue;
+}
 html {
     box-sizing: border-box;
   scroll-behavior: smooth;
@@ -24,6 +33,7 @@ body{
   background-size: cover;
 }
 .navbar-brand img{
+  z-index: -1;
     width: 90px;
     padding: 12px 9px;
 }
@@ -721,6 +731,12 @@ tr:nth-child(odd) {
 /* Responsiveness */
 @media screen and (max-width: 480px)
 {
+  .navbar-brand img{
+    width: 120px;
+    padding: 0px 9px;
+    position: absolute;
+    top: 0%;
+}
   #myHeader{
     width: 100%;
     height: 100px;
@@ -796,6 +812,133 @@ tr:nth-child(odd) {
     .noteslimo{
       position: absolute;
       top: 7%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .price{
+      top: 64%;
+      left: 36%;
+      width: 42%;
+    }
+    .pricelimo{
+      top: 60%;
+      left: 36%;
+      width: 42%;
+    }
+    .homemini{
+      left: 88%;
+     }
+     .homemin{
+      left: 90%;
+      top: 2%;
+     }
+     .cust_book{
+      height: 98%;
+      width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .cust_book1{
+        width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .historytable{
+      width: 100%;
+        font-size: 12px;
+        top: 18%;
+        left: 0%;
+    }
+}
+
+@media screen and (max-width: 840px)
+{
+  .navbar-brand img{
+    width: 120px;
+    padding: 0px 9px;
+    position: absolute;
+    top: 0%;
+}
+  #myHeader{
+    width: 100%;
+    height: 100px;
+  }
+  .footer-dark {
+    width: 100%;
+    height: 90%;
+    top: 380%;
+    }
+    .micro{
+      top: 40%;
+      width: 85%;
+      height: 88%;
+     }
+     .micro li{
+      box-shadow: 0 0 32px #ffffffec;
+      background-color: #0095ffbb;
+      margin: 8px;
+      border-radius: 22px;
+      border: 2px solid white;
+      padding: 0px 12px;
+      display: inline;
+      font-size: 18px;
+      color: #ffffff;
+     }
+     .micropic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suvpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .limosinepic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .sedanpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suv{
+      top: 140%;
+      width: 85%;
+      height: 88%;
+     }
+     .sedan{
+      top: 240%;
+      width: 85%;
+      height: 88%;
+     }
+     .limosine{
+      top: 340%;
+      width: 85%;
+      height: 88%;
+     }
+     .specsofcar{
+      border-radius: 0%;
+      display:table-row;
+      top: 78%;
+    }
+    .notesmicro{
+      position: absolute;
+      top: 17%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .noteslimo{
+      position: absolute;
+      top: 10%;
       left: 2%;
       display: inline;
       width: 100%;
