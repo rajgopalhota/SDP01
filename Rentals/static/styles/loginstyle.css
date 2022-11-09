@@ -103,7 +103,7 @@ body{
     top: 100px;
 }
 .typewriter h1 {
-    color: rgb(26, 23, 23);
+    color: rgb(255, 255, 255);
     font-family: monospace;
     overflow: hidden;
     border-right: .15em solid orange;
@@ -189,23 +189,21 @@ body{
 }
 
 
-
-
-
-.invLog{
-    display :flex;
+#invLog{
+    z-index: 1;
+    display: flex;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: aliceblue;
-    padding: 12px;
-    border-radius: 22px;
-    background-color: rgba(255, 0, 0, 0.445);
-    font-size: 22px;
+    border-radius: 10px;
+    background-color: rgba(246, 105, 29, 0.758);
+    font-size: 20px;
     position: absolute;
-    top: 6%;
-    left: 92%;
-    border: 3px solid rgb(255, 255, 255);
+    top: 40%;
+    left: 44%;
 }
-
+#invLog button{
+    color: rgb(255, 0, 0);
+}
 @media screen and (max-width: 480px)
 {
     .typewriter{
@@ -252,4 +250,13 @@ body{
         margin:12px 0px;
         width: 120%;
     }
+    #invLog{
+        display: flex;
+        font-size: 16px;
+    top: 35%;
+    left: 31%;
+    }
+    .typewriter h1 {
+        color: rgb(0, 0, 0);
+      }
 }

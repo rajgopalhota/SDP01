@@ -25,8 +25,8 @@ def LoginView(request):
             messages.success(request, 'Welcome Back, Logged In Succeessfully')
             return redirect('/')
         else:
-            messages.error(request, 'invalid username or password')
-            return redirect("/login")
+            context= {'Error':'INVALID CREDENTIALS','Sign':' X'}
+            return render(request, 'Rentals/login.html', context)
     else:
         return render(request,'Rentals/login.html')
 
@@ -35,20 +35,24 @@ def Register(request):
         fname=request.POST['fname']
         lname=request.POST['lname']
         email = request.POST['mail']
-        username = request.POST['username']
+        usern = request.POST['username']
         password1= request.POST['password1']
         password2= request.POST['password2']
         if password1==password2:
             password = password1
         else:
-            messages.info(request, 'Passwords dont match')
+            context= {'Error':'Passwords does not match','Sign':' X'}
+            return render(request, 'Rentals/register.html', context)
         date = datetime.date.today()
-
-        user = User.objects.create_user(first_name = fname, last_name = lname, username = username , password = password , email = email, date_joined = date)
+        try:
+            user= User.objects.get(username=usern)
+            context= {'Error':'The username already taken. Please try another username.','Sign':' X'}
+            return render(request, 'Rentals/register.html', context)
+        except User.DoesNotExist:
+            user = User.objects.create_user(first_name = fname, last_name = lname, username = usern , password = password , email = email, date_joined = date)
         user.save()
         print('user created')
         return redirect('/login')
-
     return render(request,'Rentals/register.html')
 
 def LoginOut(request):
