@@ -85,9 +85,10 @@ def Ridenow(request):
             print(srce, dest, type, phone, booking)
             if srce == '' or dest == '' or len(phone)!=10:
                 messages.error(request, 'Enter All Fields Properly')
-            ride = RidesRightNow(user_name = username, source = srce, destination = dest, cartype = type, phone = phone)
-            ride.save()
-            messages.success(request, 'Congratulations, Your cab will be arriving soon!')
+            else:
+                ride = RidesRightNow(user_name = username, source = srce, destination = dest, cartype = type, phone = phone)
+                ride.save()
+                messages.success(request, 'Congratulations, Your cab will be arriving soon!')
         return render(request, 'Rentals/OnTheGo.html')
     messages.error(request, 'Please, Login First!')
     return redirect('/')
