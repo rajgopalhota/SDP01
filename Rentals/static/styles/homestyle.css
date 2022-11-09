@@ -4,12 +4,14 @@
 }
 .navbar-toggler-icon{
   z-index: -1;
-  font-size: 46px;
-  padding: 12px;
-  border-radius: 12px;
+  font-size: 22px;
+  border-radius: 4px;
   background-color: rgba(186, 189, 194, 0.84);
   border: 2px solid white;
-  box-shadow: 0 0 22px aliceblue;
+  box-shadow: 0 0 14px aliceblue;
+  position: absolute;
+  top: 5%;
+  right: 4%;
 }
 html {
     box-sizing: border-box;
@@ -731,15 +733,23 @@ tr:nth-child(odd) {
 /* Responsiveness */
 @media screen and (max-width: 480px)
 {
+  #navbarSupportedContent{
+    text-align: center;
+    box-shadow: 0 0 42px aliceblue;
+    padding: 22px;
+    border: 2px solid aliceblue;
+    border-radius: 12px;
+    background-color: rgba(33, 49, 95, 0.877);
+  }
   .navbar-brand img{
-    width: 120px;
+    width: 60px;
     padding: 0px 9px;
     position: absolute;
     top: 0%;
 }
   #myHeader{
     width: 100%;
-    height: 100px;
+    height: 60px;
   }
   .footer-dark {
     width: 100%;
@@ -795,16 +805,16 @@ tr:nth-child(odd) {
      }
      .specsofcar{
       border-radius: 0%;
-      display:flow-root;
-      top: 72%;
+      display:table-row;
+      top: 78%;
     }
     .notesmicro{
       position: absolute;
-      top: 6%;
+      top: 3%;
       left: 2%;
       display: inline;
       width: 100%;
-      font-size: 20px;
+      font-size: 16px;
       padding: 12px;
       color: #f0f9ff;
       font-weight: bold;
@@ -858,15 +868,24 @@ tr:nth-child(odd) {
 
 @media screen and (max-width: 840px)
 {
+  #navbarSupportedContent{
+    text-align: center;
+    box-shadow: 0 0 42px aliceblue;
+    padding: 22px;
+    border: 2px solid aliceblue;
+    border-radius: 12px;
+    background-color: rgba(33, 49, 95, 0.877);
+  }
   .navbar-brand img{
-    width: 120px;
+    width: 60px;
     padding: 0px 9px;
     position: absolute;
     top: 0%;
+    left: 0%;
 }
   #myHeader{
     width: 100%;
-    height: 100px;
+    height: 40px;
   }
   .footer-dark {
     width: 100%;
