@@ -16,7 +16,8 @@
     padding: 0 8px;
   }
 
-  .card {
+  .card1 {
+    background-color: transparent;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     margin: 8px;
   }
@@ -28,7 +29,7 @@
     display: inline-block;
     padding: 5px 30px;
     text-align: center;
-    background-color: rgba(62, 75, 122, 0.607);
+    background-color: rgba(25, 95, 136, 0.636);
     color: white;
     box-shadow: 0 0 32px rgb(43, 114, 219);
     border: 3px solid rgb(195, 229, 230);
@@ -75,6 +76,9 @@
   }
 
   @media screen and (max-width: 650px) {
+    .about-section {
+      left: 0%;
+    }
     .abtcolumn {
       width: 100%;
       display: block;
@@ -86,13 +90,19 @@
   .mailing{
     text-decoration: none;
     font-size: 22px;
-    position: relative;
-    left: 102px;
+    text-align: center;
     color: aliceblue;
     text-shadow: 0 0 2px black;
   }
   .abtcontainer{
-    background-color: rgba(0, 102, 255, 0.703);
+    border: 3px solid aliceblue;
+    box-shadow: 0 0 13px rgb(43, 114, 219);
+    border-radius: 12px;
+    background-color: rgba(55, 180, 252, 0.747);
+  }
+  .abtcontainer p{
+    font-weight: bold;
+    text-align: justify;
   }
   .abtcontainer:hover{
     cursor: pointer;

@@ -731,7 +731,7 @@ tr:nth-child(odd) {
 
 
 /* Responsiveness */
-@media screen and (max-width: 480px)
+@media screen and (max-width: 680px)
 {
   #navbarSupportedContent{
     text-align: center;
@@ -754,12 +754,12 @@ tr:nth-child(odd) {
   .footer-dark {
     width: 100%;
     height: 90%;
-    top: 380%;
+    top: 250%;
     }
     .micro{
-      top: 40%;
+      top: 15%;
       width: 85%;
-      height: 88%;
+      height: 60%;
      }
      .micro li{
       box-shadow: 0 0 32px #ffffffec;
@@ -789,32 +789,50 @@ tr:nth-child(odd) {
       border-radius: 12px;
      }
      .suv{
-      top: 140%;
+      top: 80%;
       width: 85%;
-      height: 88%;
+      height: 60%;
      }
      .sedan{
-      top: 240%;
+      top: 145%;
       width: 85%;
-      height: 88%;
+      height: 60%;
      }
      .limosine{
-      top: 340%;
+      top: 210%;
       width: 85%;
-      height: 88%;
+      height: 60%;
+     }
+     .limosine h1{
+      position: absolute;
+      left: 24%;
      }
      .specsofcar{
       border-radius: 0%;
       display:table-row;
-      top: 78%;
+      top: 58%;
+    }
+    .specsofcar1{
+      border-radius: 0%;
+      display:table-row;
+      top: 72%;
+    }
+    .specsofcar1 li{
+      display:inline-flex;
+      font-size: 10px;
+    }
+    .specsofcar li{
+      display:inline-flex;
+      font-size: 10px;
     }
     .notesmicro{
       position: absolute;
-      top: 3%;
-      left: 2%;
+      top: 10%;
+      left: 1%;
+      text-align: justify;
       display: inline;
       width: 100%;
-      font-size: 16px;
+      font-size: 12px;
       padding: 12px;
       color: #f0f9ff;
       font-weight: bold;
@@ -824,26 +842,29 @@ tr:nth-child(odd) {
       top: 7%;
       left: 2%;
       display: inline;
+      text-align: justify;
       width: 100%;
-      font-size: 20px;
+      font-size: 12px;
       padding: 12px;
       color: #f0f9ff;
       font-weight: bold;
     }
     .price{
-      top: 64%;
+      top: 40%;
       left: 36%;
       width: 42%;
     }
     .pricelimo{
-      top: 60%;
+      top: 40%;
       left: 36%;
       width: 42%;
     }
     .homemini{
+      width: 27px;
       left: 88%;
      }
      .homemin{
+      width: 27px;
       left: 90%;
       top: 2%;
      }
@@ -866,7 +887,7 @@ tr:nth-child(odd) {
     }
 }
 
-@media screen and (max-width: 840px)
+/* @media screen and (max-width: 840px)
 {
   #navbarSupportedContent{
     text-align: center;
@@ -1000,4 +1021,4 @@ tr:nth-child(odd) {
         top: 18%;
         left: 0%;
     }
-}
+} */
