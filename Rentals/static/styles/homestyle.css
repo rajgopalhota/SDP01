@@ -41,7 +41,7 @@ body{
 }
 .navbar li{
     display: inline-block;
-    font-size: 23px;
+    font-size: 22px;
     background-color: rgba(255, 224, 68, 0.854);
     border-radius: 50px;
     border: 2px solid rgba(0, 163, 46, 0.906);
@@ -595,6 +595,9 @@ body{
   position: absolute;
   top: 85%;
 }
+.specsofcar li{
+  font-size: 17px;
+}
 
 .notesmicro{
   position: absolute;
@@ -627,7 +630,7 @@ body{
   left: 42%;
   background-color: rgba(238, 255, 0, 0.849);
   width: 10%;
-  font-size: 20px;
+  font-size: 18px;
   padding: 6px 10px;
   color: #172c3a;
   font-weight: bold;
@@ -642,7 +645,7 @@ body{
   left: 82%;
   background-color: rgba(238, 255, 0, 0.849);
   width: 10%;
-  font-size: 20px;
+  font-size: 18px;
   padding: 6px 10px;
   color: #172c3a;
   font-weight: bold;
