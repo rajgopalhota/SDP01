@@ -13,6 +13,12 @@
   top: 5%;
   right: 4%;
 }
+figure video {
+  opacity: 0.7;
+  width: 100%;
+  position: fixed;
+	mix-blend-mode : screen;
+}
 html {
     box-sizing: border-box;
   scroll-behavior: smooth;
