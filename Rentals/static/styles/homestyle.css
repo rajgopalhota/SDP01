@@ -15,7 +15,8 @@
 }
 figure video {
   opacity: 0.7;
-  width: 100%;
+  min-width: 100%;
+  min-height: 100%;
   position: fixed;
 	mix-blend-mode : screen;
 }
@@ -744,6 +745,9 @@ tr:nth-child(odd) {
 /* Responsiveness */
 @media screen and (max-width: 680px)
 {
+  figure video {
+    min-width: 100%;
+  }
   #navbarSupportedContent{
     width: 100%;
     text-align: center;
