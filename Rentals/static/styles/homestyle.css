@@ -29,6 +29,7 @@ html {
   box-shadow: 0 0 32px rgba(255, 161, 30, 0.836);
 }
 body{
+  cursor:crosshair;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background: url(/static/styles/Images&Gifs/rt5.jpg) no-repeat center center fixed;
@@ -722,13 +723,14 @@ tr:nth-child(odd) {
 }
 
 #popupmsg{
-  border-radius: 42px;
+  z-index: 1;
+  border-radius: 32px;
   text-align: center;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 3px solid rgba(254, 201, 28, 0.863);
-  box-shadow: 0 0 32px rgba(240, 154, 34, 0.806);
+  border: 2px solid rgba(254, 201, 28, 0.863);
+  box-shadow: 0 0 32px rgb(54, 135, 248);
 }
 
 
@@ -737,7 +739,11 @@ tr:nth-child(odd) {
 @media screen and (max-width: 680px)
 {
   #navbarSupportedContent{
+    width: 100%;
     text-align: center;
+    position: fixed;
+    top: 2%;
+    right: 0;
     box-shadow: 0 0 42px aliceblue;
     padding: 22px;
     border: 2px solid aliceblue;
@@ -748,11 +754,17 @@ tr:nth-child(odd) {
     width: 60px;
     padding: 0px 9px;
     position: absolute;
-    top: 0%;
+    top: 2%;
+}
+.navbar li a {
+  padding: 0px 12px;
+}
+.navbar li a:hover{
+  padding: 0px 12px;
 }
   #myHeader{
     width: 100%;
-    height: 60px;
+    height: 50px;
   }
   .footer-dark {
     width: 100%;
