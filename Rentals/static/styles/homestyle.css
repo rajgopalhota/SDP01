@@ -26,9 +26,10 @@ html {
   scroll-behavior: smooth;
  }
 #myHeader{
+  position: absolute;
+  top: 0;
   background: url(/static/styles/Images&Gifs/nav2.jpg) no-repeat center center fixed;
   background-size: cover;
-  /* position: fixed; */
   box-shadow: 0 0 22px rgb(82, 174, 240);
   width: 100%;
   height: 65px;
@@ -39,7 +40,6 @@ html {
   box-shadow: 0 0 32px rgba(255, 161, 30, 0.836);
 }
 body{
-  cursor:crosshair;
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   background: url(/static/styles/Images&Gifs/rt5.jpg) no-repeat center center fixed;
@@ -736,6 +736,8 @@ tr:nth-child(odd) {
 }
 
 #popupmsg{
+  opacity: 0.75;
+  margin-top: 4%;
   z-index: 1;
   border-radius: 32px;
   text-align: center;
@@ -757,6 +759,7 @@ tr:nth-child(odd) {
   
   #navbarSupportedContent{
     width: 100%;
+    height: 100%;
     text-align: center;
     position: fixed;
     top: 2%;
@@ -768,10 +771,11 @@ tr:nth-child(odd) {
     background-color: rgba(33, 49, 95, 0.877);
   }
   .navbar-brand img{
-    width: 60px;
-    padding: 0px 9px;
+    left: 0;
+    width: 80px;
+    padding: 0px 12px;
     position: absolute;
-    top: 2%;
+    top: 0%;
 }
 .navbar li a {
   padding: 0px 12px;
@@ -785,7 +789,7 @@ tr:nth-child(odd) {
   }
   .footer-dark {
     width: 100%;
-    height: 90%;
+    height: 100%;
     top: 250%;
     }
     .micro{
