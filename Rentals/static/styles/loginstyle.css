@@ -35,7 +35,7 @@ body{
     height: 36%;
     background-color: rgba(0, 0, 0, 0.63);
     color: white;
-    position: absolute;
+    position: fixed;
     top: 33%;
     left: 30%;
 }
@@ -75,7 +75,7 @@ body{
     text-align: center;
 }
 .btn{
-    position: absolute;
+    position: fixed;
     left: 62%;
     color: white;
     font-size: 32;
@@ -139,7 +139,7 @@ body{
     color: aliceblue;
 }
 .forgot{
-    position: absolute;
+    position: fixed;
     top: 61%;
     left:70%;
     margin:12px 0px;
@@ -159,7 +159,7 @@ body{
 
 /* Google Signup */
 .btn1{
-    position: absolute;
+    position: fixed;
     left: 8%;
     color: white;
     font-size: 22;
@@ -181,7 +181,7 @@ body{
     outline: none;
 }
 .btn1 img{
-        position:absolute;
+        position:fixed;
         left: 7%;
         top: 8%;
         width: 60px;
@@ -197,7 +197,7 @@ body{
     border-radius: 10px;
     background-color: rgba(246, 105, 29, 0.758);
     font-size: 20px;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 44%;
 }
