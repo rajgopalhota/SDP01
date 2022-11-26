@@ -93,7 +93,7 @@ body{
     background-color: rgba(255, 255, 255, 0.612);
     color: rgb(0, 0, 0);
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     top: 10%;
     left: 5%;
 }
@@ -112,7 +112,7 @@ body{
     background-color: rgba(255, 255, 255, 0.612);
     color: rgb(0, 0, 0);
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     top: 40%;
     left: 5%;
 }
@@ -123,7 +123,7 @@ body{
     background-color: rgba(255, 255, 255, 0.7);
     color: rgb(0, 0, 0);
     border-radius: 20px;
-    position: absolute;
+    position: fixed;
     top: 70%;
     left: 5%;
 }

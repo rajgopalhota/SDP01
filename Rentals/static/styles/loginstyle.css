@@ -10,7 +10,7 @@
 #myHeader{
     width: 100%;
     background-color: black;
-    position: fixed;
+    position: absolute;
     height: 30px;
     padding: 12px 16px;
     z-index: 999; /*Content goes under header*/
@@ -139,7 +139,7 @@ body{
     color: aliceblue;
 }
 .forgot{
-    position: fixed;
+    position: absolute;
     top: 61%;
     left:70%;
     margin:12px 0px;
@@ -197,7 +197,7 @@ body{
     border-radius: 10px;
     background-color: rgba(246, 105, 29, 0.758);
     font-size: 20px;
-    position: fixed;
+    position: absolute;
     top: 40%;
     left: 44%;
 }
@@ -237,14 +237,14 @@ body{
         height: 14%;
     }
     .btn1 img{
-            position:fixed;
+            position:absolute;
             left: 6%;
             top: 10%;
             width: 80px;
             padding: 1px;
     }
     .forgot{
-        position: fixed;
+        position: absolute;
         top: 55%;
         left:10%;
         margin:12px 0px;
@@ -270,13 +270,11 @@ body{
     .container{
         width: 80%;
         height: 50%;
-        position: fixed;
         top: 33%;
         left: 0.5%;
     }
     .btn{
         top: 65%;
-        position: fixed;
         left: 6%;
         width: 80%;
         height: 14%;
@@ -287,7 +285,6 @@ body{
         font-weight: bold;
     }
     .btn1{
-        position: fixed;
         top: 80%;
         left: 6%;
         font-size: 22;
@@ -295,14 +292,12 @@ body{
         height: 14%;
     }
     .btn1 img{
-            position:fixed;
             left: 6%;
             top: 10%;
             width: 80px;
             padding: 1px;
     }
     .forgot{
-        position: fixed;
         top: 55%;
         left:10%;
         margin:12px 0px;
