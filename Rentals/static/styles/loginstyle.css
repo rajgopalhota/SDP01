@@ -75,7 +75,7 @@ body{
     text-align: center;
 }
 .btn{
-    position: fixed;
+    position: absolute;
     left: 62%;
     color: white;
     font-size: 32;
@@ -159,7 +159,7 @@ body{
 
 /* Google Signup */
 .btn1{
-    position: fixed;
+    position: absolute;
     left: 8%;
     color: white;
     font-size: 22;
@@ -181,7 +181,7 @@ body{
     outline: none;
 }
 .btn1 img{
-        position:fixed;
+        position:absolute;
         left: 7%;
         top: 8%;
         width: 60px;
@@ -218,7 +218,7 @@ body{
     }
     .btn{
         top: 65%;
-        position: fixed;
+        position: absolute;
         left: 6%;
         width: 80%;
         height: 14%;
@@ -229,7 +229,7 @@ body{
         font-weight: bold;
     }
     .btn1{
-        position: fixed;
+        position: absolute;
         top: 80%;
         left: 6%;
         font-size: 22;
@@ -270,11 +270,13 @@ body{
     .container{
         width: 80%;
         height: 50%;
+        position: absolute;
         top: 33%;
         left: 0.5%;
     }
     .btn{
         top: 65%;
+        position: absolute;
         left: 6%;
         width: 80%;
         height: 14%;
@@ -285,6 +287,7 @@ body{
         font-weight: bold;
     }
     .btn1{
+        position: absolute;
         top: 80%;
         left: 6%;
         font-size: 22;
@@ -292,12 +295,14 @@ body{
         height: 14%;
     }
     .btn1 img{
+            position:absolute;
             left: 6%;
             top: 10%;
             width: 80px;
             padding: 1px;
     }
     .forgot{
+        position: absolute;
         top: 55%;
         left:10%;
         margin:12px 0px;
