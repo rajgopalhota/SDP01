@@ -19,13 +19,15 @@ figure video {
   min-width: 100%;
   min-height: 100%;
   position: fixed;
-	mix-blend-mode : screen;
+	mix-blend-mode : lighten;
 }
 html {
     box-sizing: border-box;
   scroll-behavior: smooth;
  }
 #myHeader{
+  background: url(/static/styles/Images&Gifs/nav2.jpg) no-repeat center center fixed;
+  background-size: cover;
   /* position: fixed; */
   box-shadow: 0 0 22px rgb(82, 174, 240);
   width: 100%;
