@@ -120,7 +120,7 @@ body{
     color: rgb(255, 255, 255);
     border-radius: 20px;
     width: 36%;
-    position: fixed;
+    position: absolute;
     top: 18%;
     left: 32%;
 }
@@ -172,7 +172,7 @@ body{
 }
 
 .cust_btn{
-    position: fixed;
+    position: absolute;
     top: 86%;
     left: 35%;
     color: white;
@@ -188,7 +188,7 @@ body{
     font-weight: bold;
 }
 .cust_btn img{
-    position:fixed;
+    position:absolute;
     left: 7%;
     top: 8%;
     width: 30px;
@@ -214,7 +214,7 @@ body{
     background-color: rgba(55, 180, 252, 0.733);
     color: rgb(255, 255, 255);
     border-radius: 20px;
-    position: fixed;
+    position: absolute;
     top: 18%;
     left: 32%;
 }
@@ -240,7 +240,7 @@ body{
   border-bottom: 3px solid rgb(245, 177, 245);
 }
 .cust_bn{
-    position: fixed;
+    position: absolute;
     top: 83%;
     left: 35%;
     color: white;
@@ -256,7 +256,7 @@ body{
     font-weight: bold;
 }
 .cust_bn img{
-    position:fixed;
+    position:absolute;
     left: 7%;
     top: 8%;
     width: 30px;
