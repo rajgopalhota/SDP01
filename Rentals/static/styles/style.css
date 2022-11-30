@@ -20,7 +20,7 @@ body{
     background-color: rgba(0, 21, 255, 0.7);
     color: white;
     border-radius: 20px;
-    position: fixed;
+    position: absolute;
     top: 20%;
     left: 40%;
 }
@@ -63,7 +63,7 @@ body{
     text-align: center;
 }
 .btn{
-    position: fixed;
+    position: absolute;
     left: 35%;
     color: white;
     font-size: 22;
