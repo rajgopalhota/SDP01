@@ -761,7 +761,7 @@ tr:nth-child(odd) {
     width: 100%;
     height: 100%;
     text-align: center;
-    position: absolute;
+    position: fixed;
     top: 2%;
     right: 0;
     box-shadow: 0 0 42px aliceblue;
