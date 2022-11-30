@@ -7,9 +7,13 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 import datetime
+from django.core.mail import send_mail
 from .models import  BookedForLater,RidesRightNow
 from django.db.models import F
+import math, random, time
 
+
+otp = ''
 # Create your views here.
 def LoginView(request):
     if request.method == 'POST':
@@ -49,7 +53,12 @@ def Register(request):
             context= {'Error':'The username already taken. Please try another username.','Sign':' X'}
             return render(request, 'Rentals/register.html', context)
         except User.DoesNotExist:
-            user = User.objects.create_user(first_name = fname, last_name = lname, username = usern , password = password , email = email, date_joined = date)
+            try:
+                user= User.objects.get(email=email)
+                context= {'Error':'The email already taken. Please try another email.','Sign':' X'}
+                return render(request, 'Rentals/register.html', context)
+            except User.DoesNotExist:
+                user = User.objects.create_user(first_name = fname, last_name = lname, username = usern , password = password , email = email, date_joined = date)
         user.save()
         print('user created')
         return redirect('/login')
@@ -67,11 +76,62 @@ def BookingHistory(request):
     messages.error(request, 'Please, Login First!')
     return redirect('/')
 
-def Home(request):
+def home(request):
     return render(request, 'Rentals/home.html')
 
 def AboutUs(request):
     return render(request, 'Rentals/about.html')
+
+def Forgot(request):
+    if request.method == 'POST':
+        email = request.POST['email']
+        try:
+            user= User.objects.get(email=email)
+            return redirect('/send_otp')
+        except User.DoesNotExist:
+            messages.error(request, ' User Does not exixst...')
+    return render(request,'Rentals/forgot.html')
+def generateOTP() :
+    digits = "0123456789"
+    OTP = ""
+    for i in range(4) :
+        OTP += digits[math.floor(random.random() * 10)]
+    return OTP
+
+def send_otp(request):
+    email=request.POST['email']
+    u = User.objects.get(email = email)
+    o=generateOTP()
+    u.set_password(o)
+    u.save()
+    send_mail('OTP Verification',#subject
+              o, #body
+              'taxies24hrs@gmail.com',#from
+              [email],#to
+              fail_silently=False,
+              )
+    print("Sent")
+    return redirect('/passreset')
+    
+def PassReset(request):
+    if request.method == 'POST':
+        uname = request.POST['uname']
+        otp = request.POST['otp']
+        pass0 = request.POST['pass']
+        pass1 = request.POST['pass1']
+        user = auth.authenticate(username = uname, password =otp)
+        if user is not None:
+            if pass0==pass1:
+                u = User.objects.get(username = uname)
+                u.set_password(pass0)
+                u.save()
+                messages.success(request, 'Password changed Successfully...')
+                time.sleep(3)
+                return redirect('/login')
+            messages.error(request, 'Passwords mismatch')
+        else:
+            messages.error(request, 'Invalid Username or OTP')
+    return render(request,'Rentals/passreset.html')
 
 def Ridenow(request):
     if request.user.is_authenticated:
@@ -110,9 +170,22 @@ def Ridelater(request):
             else:
                 ride = BookedForLater(user_name = username, source = srce, destination = dest,date = sdate,time = stime, cartype = type, phone = phone)
                 ride.save()
+                confirmmail(request, srce,dest,sdate,stime)
                 messages.success(request, 'Congratulations, Your cab has booked')
         return render(request, 'Rentals/schedule.html')
     messages.error(request, 'Please, Login First!')
     return redirect('/')
+
+def confirmmail(request,srce,dest,sdate,stime):
+    email = request.user.email
+    print(email)
+    msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
+    send_mail('Ride Confirmation.........',#subject
+              msg, #body
+              'taxies24hrs@gmail.com',#from
+              [email],#to
+              fail_silently=False,
+              )
+    return print("Mail Sent")
     
 

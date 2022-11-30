@@ -750,6 +750,81 @@ tr:nth-child(odd) {
 
 
 
+.form-gap {
+  padding-top: 70px;
+}
+
+.forgotcontainer{
+  margin-top: 3%;
+  box-shadow: 0 0 14px #39d2f8;
+  font-weight: bolder;
+  font-size: 20px;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background-color: rgba(55, 180, 252, 0.733);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: absolute;
+  left: 26%;
+  width: 50vw;
+  height: auto;
+  padding: 12px;
+}
+.input-group{
+  padding: 2px;
+  margin:12px 0px;
+  width: 100%;
+  border-bottom: 2px solid rgb(245, 183, 26);
+}
+.input-group:hover{
+  box-shadow: 0 0 24px #13daf4;
+  border-bottom: 3px solid rgb(3, 222, 247);
+}
+.input-group input{
+  background: none;
+  font-size: 20px;
+  width: 65%;
+  outline: none;
+  border: none;
+  
+  color: rgb(255, 228, 212);
+  padding: 5px 10px;
+}
+.forgotlogo{
+  position: relative;
+  left: 46%;
+  width: 72px;
+}
+.forgotbtn{
+  position: relative;
+  bottom: 5%;
+  left: 35%;
+  color: white;
+  font-size: 22;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  width: 35%;
+  margin: 12px 0;
+  padding: 6px;
+  border-radius: 90px;
+  border: 2px solid rgb(245, 183, 26);
+  font-weight: bold;
+}
+.forgotbtn img{
+  position:absolute;
+  left: 7%;
+  top: 8%;
+  width: 30px;
+  padding: 1px;
+}
+.forgotbtn:hover{
+box-shadow: 0 0 34px #b113f4;
+  color: rgb(169, 0, 169);
+  background: rgb(219, 193, 228);
+  outline: none;
+}
+
+
 /* Responsiveness */
 @media screen and (max-width: 680px)
 {

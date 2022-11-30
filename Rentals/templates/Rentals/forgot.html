@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+{% block title %} Forgot Password {% endblock title %}
+{% block body %}
+<div class="form-gap"></div>
+<div class="forgotcontainer">
+  <img src="/static/styles/Images&Gifs/key.png" class="forgotlogo">
+  <h2 class="text-center">Forgot Password?</h2>
+  <h5>An OTP will be sent to below Email.</h5>
+  <div class="forgotbody">
+    <form autocomplete="off" class="forgotform" method="post" action="/send_otp/">
+      {% csrf_token %}
+        <div class="input-group">
+          <input name="email" placeholder="Email address" type="email">
+        </div>
+        <button class="forgotbtn" type="submit"><img src="/static/styles/Images&Gifs/book.png">Send Email</button>
+    </form>
+  </div>
+</div>
+
+{% endblock body %}

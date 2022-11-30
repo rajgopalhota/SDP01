@@ -83,13 +83,17 @@ WSGI_APPLICATION = 'SDP.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'd9btdra42h6pl9',
-        'USER': 'ijqmgwcfgrfyge',
-        'PASSWORD': '4361bf15c9c0765dd0d391cb091ca252128cdd3f43bda71bdd36286ce926138f',
-        'HOST':'ec2-44-195-132-31.compute-1.amazonaws.com',
-        'PORT':'5432',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': BASE_DIR / 'db.sqlite3',
     }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.postgresql',
+    #     'NAME': 'd9btdra42h6pl9',
+    #     'USER': 'ijqmgwcfgrfyge',
+    #     'PASSWORD': '4361bf15c9c0765dd0d391cb091ca252128cdd3f43bda71bdd36286ce926138f',
+    #     'HOST':'ec2-44-195-132-31.compute-1.amazonaws.com',
+    #     'PORT':'5432',
+    # }
 }
 
 
@@ -131,6 +135,15 @@ STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 django_heroku.settings(locals())
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
+#EMAIL
+
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
+EMAIL_HOST='smtp.gmail.com'
+EMAIL_USE_TLS=True
+EMAIL_PORT=587
+EMAIL_HOST_USER='taxies24hrs@gmail.com'
+EMAIL_HOST_PASSWORD='zpkkljttithueyay'
+
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
