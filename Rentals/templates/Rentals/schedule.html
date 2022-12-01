@@ -4,36 +4,43 @@
 
 <div class="cust_book">
     <a href="/"><img src="/static/styles/Images&Gifs/homeico.png" class="homemin"></a>
-      <h1>Schedule Ride</h1>
-  <form method="POST" action="">
-    {% csrf_token %}
-      <div class="box">
-      FROM:<input type="text" class="in_box" name="s_from">
-      </div>
-      <div class="box">
-          TO:<input type="text" class="in_box" name="s_dest">
-      </div>
-      <div class="box">
-          DATE OF TRAVEL:<input type="date" class="in_box" name="s_date">
-      </div>
-      <div class="box">
-          PICK UP TIME:<input type="time" class="in_box" name="s_time">
-      </div>
-      <div class="box">
-      CAR TYPE:<select name="s_optedcar" class="typedown">
-          <option value="Anything">Anything</option>
-          <option value="Micro">Micro</option>
-          <option value="SUV">SUV</option>
-          <option value="Sedan">Sedan</option>
-          <option value="Limosine">Limosine</option>
-      </select>
-      </div>
-      <div class="box">
-      PHONE NUMBER:<input type="number" class="in_box" name="s_phone">
-      <button class="cust_btn" type="submit"><img src="/static/styles/Images&Gifs/book.png">BOOK</button>
-      </div>
-      
-  </form>
-  </div>
+    <h1>Schedule Ride</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        <div class="box">
+            FROM:<input type="text" class="in_box" name="s_from">
+        </div>
+        <div class="box">
+            TO:<input type="text" class="in_box" name="s_dest">
+        </div>
+        <div class="box">
+            DATE OF TRAVEL:<input id="date_picker" type="date" class="in_box" name="s_date">
+        </div>
+        <div class="box">
+            PICK UP TIME:<input type="time" class="in_box" name="s_time">
+        </div>
+        <div class="box">
+            CAR TYPE:<select name="s_optedcar" class="typedown">
+                <option value="Anything">Anything</option>
+                <option value="Micro">Micro</option>
+                <option value="SUV">SUV</option>
+                <option value="Sedan">Sedan</option>
+                <option value="Limosine">Limosine</option>
+            </select>
+        </div>
+        <div class="box">
+            PHONE NUMBER:<input type="number" class="in_box" name="s_phone">
+            <button class="cust_btn" type="submit"><img src="/static/styles/Images&Gifs/book.png">BOOK</button>
+        </div>
 
+    </form>
+</div>
+<script language="javascript">
+    var today = new Date();
+    var dd = String(today.getDate()).padStart(2, '0');
+    var mm = String(today.getMonth() + 1).padStart(2, '0');
+    var yyyy = today.getFullYear();
+    today = yyyy + '-' + mm + '-' + dd;
+    $('#date_picker').attr('min',today);
+</script>
 {% endblock body %}
