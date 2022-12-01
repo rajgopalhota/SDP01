@@ -9,7 +9,6 @@ urlpatterns = [
     path('', views.home, name = 'home'),
     path('forgot/', views.Forgot, name = 'forgot'),
     path('passreset/', views.PassReset, name = 'passreset'),
-    path("send_otp/",views.send_otp,name="send otp"),
     path('aboutus/', views.AboutUs, name = 'aboutus'),
     path('history/', views.BookingHistory, name = 'history'),
     path('loginout/', views.LoginOut, name = 'history'),

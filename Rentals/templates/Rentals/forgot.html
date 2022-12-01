@@ -7,7 +7,7 @@
   <h2 class="text-center">Forgot Password?</h2>
   <h5>An OTP will be sent to below Email.</h5>
   <div class="forgotbody">
-    <form autocomplete="off" class="forgotform" method="post" action="/send_otp/">
+    <form autocomplete="off" class="forgotform" method="post" action="">
       {% csrf_token %}
         <div class="input-group">
           <input name="email" placeholder="Email address" type="email">

@@ -87,7 +87,19 @@ def Forgot(request):
         email = request.POST['email']
         try:
             user= User.objects.get(email=email)
-            return redirect('/send_otp')
+            email=request.POST['email']
+            u = User.objects.get(email = email)
+            o=generateOTP()
+            u.set_password(o)
+            u.save()
+            send_mail('OTP Verification',#subject
+              o, #body
+              'taxies24hrs@gmail.com',#from
+              [email],#to
+              fail_silently=False,
+              )
+            print("Sent")
+            return redirect('/passreset')
         except User.DoesNotExist:
             messages.error(request, ' User Does not exixst...')
     return render(request,'Rentals/forgot.html')
@@ -98,20 +110,20 @@ def generateOTP() :
         OTP += digits[math.floor(random.random() * 10)]
     return OTP
 
-def send_otp(request):
-    email=request.POST['email']
-    u = User.objects.get(email = email)
-    o=generateOTP()
-    u.set_password(o)
-    u.save()
-    send_mail('OTP Verification',#subject
-              o, #body
-              'taxies24hrs@gmail.com',#from
-              [email],#to
-              fail_silently=False,
-              )
-    print("Sent")
-    return redirect('/passreset')
+# def send_otp(request, mail):
+#     email=request.POST['email']
+#     u = User.objects.get(email = mail)
+#     o=generateOTP()
+#     u.set_password(o)
+#     u.save()
+#     send_mail('OTP Verification',#subject
+#               o, #body
+#               'taxies24hrs@gmail.com',#from
+#               [mail],#to
+#               fail_silently=False,
+#               )
+#     print("Sent")
+#     return redirect('/passreset')
     
 def PassReset(request):
     if request.method == 'POST':
@@ -126,7 +138,7 @@ def PassReset(request):
                 u.set_password(pass0)
                 u.save()
                 messages.success(request, 'Password changed Successfully...')
-                time.sleep(3)
+                time.sleep(6)
                 return redirect('/login')
             messages.error(request, 'Passwords mismatch')
         else:
