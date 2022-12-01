@@ -7,13 +7,14 @@ from django.contrib.auth.models import User, auth
 from django.contrib.auth import authenticate, login, logout
 from django.contrib import messages
 import datetime
-from django.core.mail import send_mail
+from django.core.mail import send_mail, EmailMultiAlternatives
+from django.template.loader import render_to_string
+from django.utils.html import strip_tags
 from .models import  BookedForLater,RidesRightNow
 from django.db.models import F
 import math, random, time
 
 
-otp = ''
 # Create your views here.
 def LoginView(request):
     if request.method == 'POST':
@@ -92,12 +93,21 @@ def Forgot(request):
             o=generateOTP()
             u.set_password(o)
             u.save()
-            send_mail('OTP Verification',#subject
-              o, #body
-              'taxies24hrs@gmail.com',#from
-              [email],#to
-              fail_silently=False,
-              )
+            context= {'otp':o}
+            html_message = render_to_string('Rentals/otpemail.html', context)
+            plain_message = strip_tags(html_message)
+            mail = EmailMultiAlternatives(
+                #subject
+                'OTP VERIFICATION',
+                #content
+                plain_message,
+                #from email
+                'taxies24hrs@gmail.com',
+                #reciepents
+                [email]
+            )
+            mail.attach_alternative(html_message, "text/html")
+            mail.send()
             print("Sent")
             return redirect('/passreset')
         except User.DoesNotExist:
@@ -191,13 +201,28 @@ def Ridelater(request):
 def confirmmail(request,srce,dest,sdate,stime):
     email = request.user.email
     print(email)
-    msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
-    send_mail('Ride Confirmation.........',#subject
-              msg, #body
-              'taxies24hrs@gmail.com',#from
-              [email],#to
-              fail_silently=False,
-              )
+    # msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
+    context= {'source':srce,'destination':dest, 'date':sdate, 'time': stime}
+    html_message = render_to_string('Rentals/confirmemail.html', context)
+    plain_message = strip_tags(html_message)
+    mail = EmailMultiAlternatives(
+        #subject
+        'RIDE CONFIRMATION',
+        #content
+        plain_message,
+        #from email
+        'taxies24hrs@gmail.com',
+        #reciepents
+        [email]
+    )
+    mail.attach_alternative(html_message, "text/html")
+    mail.send()
+    # send_mail('Ride Confirmation.........',#subject
+    #           plain_message, #body
+    #           'taxies24hrs@gmail.com',#from
+    #           [email],#to
+    #           fail_silently=False,
+    #           )
     return print("Mail Sent")
     
 

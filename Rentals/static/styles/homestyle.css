@@ -828,6 +828,18 @@ box-shadow: 0 0 34px #b113f4;
 /* Responsiveness */
 @media screen and (max-width: 680px)
 {
+  .forgotcontainer{
+    font-size: 16px;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+  }
+  .forgotbtn{
+    left: 0%;
+    width: 100%;
+  }
   figure video {
     min-width: 100%;
   }
