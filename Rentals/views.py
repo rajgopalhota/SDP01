@@ -61,7 +61,7 @@ def Register(request):
             except User.DoesNotExist:
                 user = User.objects.create_user(first_name = fname, last_name = lname, username = usern , password = password , email = email, date_joined = date)
         user.save()
-        html_message = render_to_string('Rentals/welcome.html', context)
+        html_message = render_to_string('Rentals/welcome.html')
         plain_message = strip_tags(html_message)
         sub = 'Hey'+" "+fname+' Welcome to Taxies 24 Hrs'
         mail = EmailMultiAlternatives(
