@@ -1,1 +1,1 @@
-web: gunicorn SDP.wsgi
+web:gunicorn SDP.wsgi
