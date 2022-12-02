@@ -40,7 +40,7 @@ html {
   box-shadow: 0 0 32px rgba(255, 161, 30, 0.836);
 }
 body{
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Baloo Bhai';
   margin: 0;
   background: url(/static/styles/Images&Gifs/rt5.jpg) no-repeat center center fixed;
   background-size: cover;
@@ -112,9 +112,9 @@ body{
 }
 /* Booking Table */
 .cust_book{
-  font-weight: bold;
+  font-family: 'Baloo Bhai';
+  /* font-weight: bold; */
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 60px 25px;
     background-color: rgba(55, 180, 252, 0.733);
     color: rgb(255, 255, 255);
@@ -130,7 +130,6 @@ body{
 }
 .cust_book h1{
     font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 40px;
@@ -204,12 +203,12 @@ body{
 
 /* Book Now */
 .cust_book1{
+  font-family: 'Baloo Bhai';
   box-shadow: 0 0 14px #39d2f8;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   width: 36%;
     height: 72%;
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     padding: 68px 25px;
     background-color: rgba(55, 180, 252, 0.733);
     color: rgb(255, 255, 255);
@@ -224,7 +223,6 @@ body{
 }
 .cust_book1 h1{
   font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 40px;
@@ -279,6 +277,23 @@ body{
 
 
 /* Footer */
+.qr{
+  font-size: 20px;
+  top: 59%;
+  left: 44%;
+  position: absolute;
+  width: 14%;
+  font-family: 'Baloo Bhai';
+}
+.qr i{
+  padding: 12px;
+}
+.qr img{
+  width: 172px;
+}
+
+
+
 .footer-dark {
   width: 100%;
   height: 70%;
@@ -669,10 +684,10 @@ body{
 
 .historytable{
   box-shadow: 0 0 14px #39d2f8;
-  font-weight: bolder;
+  /* font-weight: bolder; */
   width: 60%;
     font-size: 20px;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Baloo Bhai';
     padding: 68px 25px;
     background-color: rgba(55, 180, 252, 0.733);
     color: rgb(255, 255, 255);
@@ -687,7 +702,6 @@ body{
 }
 .historytable h1{
   font-weight: bold;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: rgb(255, 255, 255);
     display: inline-block;
     font-size: 40px;
@@ -705,9 +719,8 @@ body{
 table {
   text-transform: uppercase;
   color: aliceblue;
-  font-weight: bold;
+  /* font-weight: bold; */
   text-align: center;
-  font-family: arial, sans-serif;
   border-collapse: collapse;
   width: 100%;
 }
@@ -759,7 +772,6 @@ tr:nth-child(odd) {
   box-shadow: 0 0 14px #39d2f8;
   font-weight: bolder;
   font-size: 20px;
-  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
   background-color: rgba(55, 180, 252, 0.733);
   color: rgb(255, 255, 255);
   border-radius: 20px;
@@ -828,6 +840,20 @@ box-shadow: 0 0 34px #b113f4;
 /* Responsiveness */
 @media screen and (max-width: 680px)
 {
+  .qr{
+    font-size: 12px;
+    top: 84%;
+    left: 36%;
+    position: absolute;
+    width: 50%;
+    font-family: 'Baloo Bhai';
+  }
+  .qr i{
+    padding: 12px;
+  }
+  .qr img{
+    width: 92px;
+  }
   .forgotcontainer{
     font-size: 16px;
     position: absolute;
@@ -876,7 +902,7 @@ box-shadow: 0 0 34px #b113f4;
   }
   .footer-dark {
     width: 100%;
-    height: 100%;
+    height: 120%;
     top: 250%;
     }
     .micro{
