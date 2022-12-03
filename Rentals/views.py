@@ -10,7 +10,7 @@ import datetime
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from .models import  BookedForLater,RidesRightNow
+from .models import  BookedForLater,RidesRightNow, FeedbackDB
 from django.db.models import F
 import math, random, time
 
@@ -248,3 +248,13 @@ def confirmmail(request,srce,dest):
     return print("Mail Sent")
     
 
+def Feedback(request):
+    if request.method == "POST":
+        comment=request.POST.get('comment')
+        user=request.user
+        comment=FeedbackDB(comment= comment, user=user)
+        comment.save()
+        messages.success(request, "Your comment has been posted successfully")
+    comments= FeedbackDB.objects.all()
+    context={'comments': comments, 'user': request.user}
+    return render(request,'Rentals/blog.html', context)

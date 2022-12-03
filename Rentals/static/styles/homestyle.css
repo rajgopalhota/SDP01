@@ -111,6 +111,25 @@ body{
 .typedown:hover{
   box-shadow: 0 0 34px #19e9f4;
 }
+
+
+/* Feedbacks */
+.feedbackcontainer{
+  margin-top: 8%;
+  margin-left: 4%;
+  width: 92%;
+  font-size: 20px;
+    padding: 60px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.feedbackcontainer:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+
+
 /* Booking Table */
 .cust_book{
   font-family: 'Baloo Bhai';

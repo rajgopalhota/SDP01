@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+{% block title %} Feedback {% endblock title %}
+{% block body %}
+<div class="feedbackcontainer">
+    <div class="container my-3">
+        <h2 class="blog-post-title">FEEDBACKS</h2>
+        <hr>
+    </div>
+    <div class="container">
+        <h2>Comments</h2>
+        {% if user.is_authenticated %}
+        <form action="" method="post">
+            {% csrf_token %}
+            <div class="form-group">
+                <label for="exampleInputEmail1">Post Comment </label>
+                <input type="text" class="form-control" name="comment" placeholder="Enter comment here">
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+        {% else %}
+        Please login to post a comment
+        {% endif %}
+        {% for comment in comments %}
+        <div class="row my-3">
+            <div class="col-md-1  ">
+                <img class="rounded mx-auto d-block w-100 p-2" src="/static/styles/Images&Gifs/user.png" alt="user">
+            </div>
+            <div class="col-md-11 ">
+                <b> {{comment.user.username}} </b> at {{comment.timestamp}}
+                <div> {{comment.comment}} </div>
+            </div>
+        </div>
+        {% endfor %}
+
+    </div>
+    {% endblock %}

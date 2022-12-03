@@ -10,6 +10,7 @@ urlpatterns = [
     path('forgot/', views.Forgot, name = 'forgot'),
     path('passreset/', views.PassReset, name = 'passreset'),
     path('aboutus/', views.AboutUs, name = 'aboutus'),
+    path('feedback/', views.Feedback, name = 'feedback'),
     path('history/', views.BookingHistory, name = 'history'),
     path('loginout/', views.LoginOut, name = 'history'),
 ]
