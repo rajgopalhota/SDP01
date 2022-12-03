@@ -6,20 +6,24 @@
         <h2 class="blog-post-title">FEEDBACKS</h2>
         <hr>
     </div>
-    <div class="container">
-        <h2>Comments</h2>
+
+    <div class="feedinfo">
         {% if user.is_authenticated %}
         <form action="" method="post">
             {% csrf_token %}
             <div class="form-group">
-                <label for="exampleInputEmail1">Post Comment </label>
+                <label for="exampleInputEmail1"><b>POST COMMENT</b></label>
                 <input type="text" class="form-control" name="comment" placeholder="Enter comment here">
             </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="feedbutton">Submit</button>
         </form>
-        {% else %}
+    </div>
+    {% else %}
+    <div class="feedinfo">
         Please login to post a comment
-        {% endif %}
+    </div>
+    {% endif %}
+    <div class="feedbody">
         {% for comment in comments %}
         <div class="row my-3">
             <div class="col-md-1  ">

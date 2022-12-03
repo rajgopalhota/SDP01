@@ -124,11 +124,48 @@ body{
     color: rgb(255, 255, 255);
     border-radius: 20px;
 }
+.feedbackcontainer h2{
+  border-bottom: 3px solid black;
+  display: inline;
+}
 .feedbackcontainer:hover{
   border: 2px solid #5abdff;
   box-shadow: 0 0 32px #5abdff;
 }
-
+.feedbody{
+  margin-top: 1%;
+  border-radius: 23px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.675);
+}
+.feedinfo{
+  color: black;
+  text-align: center;
+  background-color: rgba(207, 116, 18, 0.89);
+  padding: 12px;
+}
+.feedbutton{
+  position: relative;
+  bottom: 5%;
+  left: 35%;
+  color: white;
+  font-size: 22;
+  background-color: #194addcf;
+  cursor: pointer;
+  outline: none;
+  width: 25%;
+  margin: 12px 0;
+  padding: 6px;
+  border-radius: 90px;
+  border: 2px solid rgb(0, 0, 0);
+  font-weight: bold;
+}
+.feedbutton:hover{
+box-shadow: 0 0 34px #ffffff;
+  color: rgb(169, 0, 169);
+  background: rgb(219, 193, 228);
+  outline: none;
+}
 
 /* Booking Table */
 .cust_book{
