@@ -265,11 +265,11 @@ def delete(request, id):
         email = request.user.email
         member = BookedForLater.objects.get(id=id)
         member.delete()
-        html_message = render_to_string('Rentals/confirmemail.html')
+        html_message = render_to_string('Rentals/cancel.html')
         plain_message = strip_tags(html_message)
         mail = EmailMultiAlternatives(
         #subject
-        'RIDE CONFIRMATION',
+        'RIDE DELETION',
         #content
         plain_message,
         #from email
