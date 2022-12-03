@@ -1,0 +1,1258 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.navbar-toggler-icon{
+  z-index: -1;
+  font-size: 22px;
+  border-radius: 4px;
+  background-color: rgba(186, 189, 194, 0.84);
+  border: 2px solid white;
+  box-shadow: 0 0 14px aliceblue;
+  position: absolute;
+  top: 5%;
+  right: 4%;
+}
+figure video {
+  z-index: -1;
+  opacity: 0.7;
+  min-width: 100%;
+  min-height: 100%;
+  position: fixed;
+	mix-blend-mode : lighten;
+}
+html {
+    box-sizing: border-box;
+  scroll-behavior: smooth;
+ }
+#myHeader{
+  position: absolute;
+  top: 0;
+  background: url(/static/styles/Images&Gifs/nav2.jpg) no-repeat center center fixed;
+  background-size: cover;
+  box-shadow: 0 0 22px rgb(82, 174, 240);
+  width: 100%;
+  height: 65px;
+  padding: 12px 16px;
+  z-index: 12; /*Content goes under header */
+}
+#myHeader:hover{
+  box-shadow: 0 0 32px rgba(255, 161, 30, 0.836);
+}
+body{
+  font-family: 'Baloo Bhai';
+  margin: 0;
+  background: url(/static/styles/Images&Gifs/rt5.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+.navbar-brand img{
+  z-index: -1;
+    width: 90px;
+    padding: 12px 9px;
+}
+.navbar li{
+    display: inline-block;
+    font-size: 20px;
+    background-color: rgba(255, 224, 68, 0.854);
+    border-radius: 50px;
+    border: 2px solid rgba(0, 163, 46, 0.906);
+}
+.navbar li:hover{
+  box-shadow: 0 0 34px #15f7a1;
+    background-color: rgb(81, 130, 176);
+    border: 3px solid rgba(255, 255, 255, 0.906);
+}
+.navbar li a:hover{
+    color: aliceblue;
+    background-color: transparent;
+    padding:4px 15px;
+    text-decoration: underline;
+}
+.navbar li a{
+  text-decoration: none;
+  padding: 5px 12px;
+}
+.btn{
+    color: white;
+    font-size: 16;
+    background: none;
+    cursor: pointer;
+    width: 45%;
+    padding: 8px 14px;
+    border-radius: 100px;
+    border: 3px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.btn:hover{
+    padding: 10px 12px;
+    color: rgb(87, 255, 235);
+    background: rgb(208, 52, 255);
+    outline: none;
+}
+
+
+
+
+
+
+
+.typedown{
+  
+  font-weight: bolder;
+  background-color: rgba(55, 180, 252, 0.126);
+  border: none;
+  color: rgb(0, 0, 0);
+  position : relative;
+  left: 12%;
+  width: 62%;
+  padding: 6px 18px;
+}
+.typedown:hover{
+  box-shadow: 0 0 34px #19e9f4;
+}
+
+
+/* Feedbacks */
+.feedbackcontainer{
+  margin-top: 8%;
+  margin-left: 4%;
+  width: 92%;
+  font-size: 20px;
+    padding: 60px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+}
+.feedbackcontainer h2{
+  border-bottom: 3px solid black;
+  display: inline;
+}
+.feedbackcontainer:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.feedbody{
+  color: white;
+  margin-top: 1%;
+  border-radius: 23px;
+  padding: 12px;
+  background-color: rgba(0, 0, 0, 0.675);
+}
+.feedbody b{
+  color: #13daf4;
+}
+.feedbody span{
+  color: #b53dff;
+}
+.feedinfo{
+  border-radius: 23px;
+  color: black;
+  background-color: rgba(207, 116, 18, 0.89);
+  padding: 12px;
+}
+.feedbutton{
+  position: relative;
+  bottom: 5%;
+  left: 35%;
+  color: white;
+  font-size: 22;
+  background-color: #194addcf;
+  cursor: pointer;
+  outline: none;
+  width: 25%;
+  margin: 12px 0;
+  padding: 6px;
+  border-radius: 90px;
+  border: 2px solid rgb(0, 0, 0);
+  font-weight: bold;
+}
+.feedbutton:hover{
+box-shadow: 0 0 34px #ffffff;
+  color: rgb(169, 0, 169);
+  background: rgb(219, 193, 228);
+  outline: none;
+}
+
+/* Booking Table */
+.cust_book{
+  font-family: 'Baloo Bhai';
+  /* font-weight: bold; */
+    font-size: 20px;
+    padding: 60px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    width: 36%;
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+.cust_book:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.cust_book h1{
+    font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.cust_book h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+    font-size: 42px;
+    cursor: pointer;
+    color: rgb(0, 0, 0);
+    border-bottom: 3px solid rgb(245, 177, 245);
+}
+.box{
+    padding: 2px;
+    margin:12px 0px;
+    width: 100%;
+    border-bottom: 2px solid rgb(245, 183, 26);
+}
+.box:hover{
+    box-shadow: 0 0 24px #13daf4;
+    border-bottom: 3px solid rgb(3, 222, 247);
+}
+.box input{
+    background: none;
+    font-size: 20px;
+    width: 65%;
+    outline: none;
+    border: none;
+    color: rgb(255, 228, 212);
+    padding: 5px 10px;
+
+}
+.box i{
+    padding: 0 12px;
+    width: 25px;
+    text-align: center;
+}
+
+.cust_btn{
+    position: absolute;
+    top: 86%;
+    left: 35%;
+    color: white;
+    font-size: 22;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    margin: 12px 0;
+    padding: 6px;
+    border-radius: 90px;
+    border: 2px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.cust_btn img{
+    position:absolute;
+    left: 7%;
+    top: 8%;
+    width: 30px;
+    padding: 1px;
+}
+.cust_btn:hover{
+  box-shadow: 0 0 34px #b113f4;
+    color: rgb(169, 0, 169);
+    background: rgb(219, 193, 228);
+    outline: none;
+}
+
+
+/* Book Now */
+.cust_book1{
+  font-family: 'Baloo Bhai';
+  box-shadow: 0 0 14px #39d2f8;
+  /* font-weight: bolder; */
+  width: 36%;
+    height: 72%;
+    font-size: 20px;
+    padding: 68px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: absolute;
+    top: 18%;
+    left: 32%;
+}
+.cust_book1:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.cust_book1 h1{
+  font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.cust_book1 h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+  font-size: 42px;
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(245, 177, 245);
+}
+.cust_bn{
+    position: absolute;
+    top: 83%;
+    left: 35%;
+    color: white;
+    font-size: 22;
+    background: none;
+    cursor: pointer;
+    outline: none;
+    width: 35%;
+    margin: 12px 0;
+    padding: 6px;
+    border-radius: 90px;
+    border: 2px solid rgb(245, 183, 26);
+    font-weight: bold;
+}
+.cust_bn img{
+    position:absolute;
+    left: 7%;
+    top: 8%;
+    width: 30px;
+    padding: 1px;
+}
+.cust_bn:hover{
+  box-shadow: 0 0 34px #b113f4;
+    color: rgb(169, 0, 169);
+    background: rgb(219, 193, 228);
+    outline: none;
+}
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+.qr{
+  font-size: 20px;
+  top: 59%;
+  left: 44%;
+  position: absolute;
+  width: 14%;
+  font-family: 'Baloo Bhai';
+}
+.qr i{
+  padding: 12px;
+}
+.qr img{
+  width: 172px;
+}
+
+
+
+.footer-dark {
+  width: 100%;
+  height: 70%;
+  top: auto;
+    position: absolute;
+    padding:50px 0;
+    color:#f0f9ff;
+    background-color:#282d32f4;
+    
+  }
+  
+  .footer-dark h3 {
+    margin-top:0;
+    margin-bottom:12px;
+    font-weight:bold;
+    font-size:16px;
+  }
+  
+  .footer-dark ul {
+    padding:0;
+    list-style:none;
+    line-height:1.6;
+    font-size:14px;
+    margin-bottom:0;
+  }
+  
+  .footer-dark ul a {
+    color:inherit;
+    text-decoration:none;
+    opacity:0.6;
+  }
+  
+  .footer-dark ul a:hover {
+    opacity:0.8;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item:not(.social) {
+      text-align:center;
+      padding-bottom:20px;
+    }
+  }
+  
+  .footer-dark .item.text {
+    margin-bottom:36px;
+  }
+  
+  @media (max-width:767px) {
+    .footer-dark .item.text {
+      margin-bottom:0;
+    }
+  }
+  
+  .footer-dark .item.text p {
+    opacity:0.6;
+    margin-bottom:0;
+  }
+  
+  .footer-dark .item.social {
+    text-align:center;
+  }
+  
+  @media (max-width:991px) {
+    .footer-dark .item.social {
+      text-align:center;
+      margin-top:20px;
+    }
+  }
+  
+  .footer-dark .item.social > a {
+    font-size:20px;
+    width:36px;
+    height:38px;
+    line-height:36px;
+    display:inline-block;
+    text-align:center;
+    margin:0 8px;
+    color:#fff;
+    opacity:0.8;
+  }
+  
+  .footer-dark .item.social > a:hover {
+    opacity:1;
+  }
+  
+  .footer-dark .copyright {
+    text-align:center;
+    padding-top:24px;
+    opacity:0.3;
+    font-size:13px;
+    margin-bottom:0;
+  }
+#icosoc img{
+  width: 38px;
+  padding: 0px 2px;
+  border-radius: 24px;
+}
+#icosoc img:hover{
+  width: 46px;
+  padding: 0px 2px;
+  border: 2px rgb(87, 184, 240);
+  box-shadow: 0 0 32px rgb(87, 184, 240);
+}
+.devdetails{
+  text-align: justify;
+}
+
+
+
+  #down {
+    margin-top: 100%;
+    padding-bottom: 25%;
+   } 
+
+
+
+
+
+   /* CARS */
+
+   .micro{
+    
+    padding: 12px;
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(82, 148, 210, 0.703);
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .micro:hover{
+    transition: all .25s ease-in-out;
+    box-shadow: 0 0 32px rgb(43, 114, 219);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .micro h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .micro li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #0095ffbb;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .micro h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .micropic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+
+   .suv{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(224, 155, 59, 0.532);
+    position: absolute;
+    top: 64%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .suv li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #ff9d00ec;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .suv:hover{
+    box-shadow: 0 0 32px rgba(251, 150, 9, 0.788);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .suv h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .suv h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .suvpic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .sedan{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(82, 148, 210, 0.703);
+    position: absolute;
+    top: 112%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .sedan li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #0095ffbb;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .sedan:hover{
+    box-shadow: 0 0 32px rgb(43, 114, 219);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .sedan h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .sedan h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .sedanpic{
+    width: 15%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .limosine{
+    border: 3px solid whitesmoke;
+    border-radius: 32px;
+    background-color: rgba(224, 155, 59, 0.532);
+    position: absolute;
+    top: 160%;
+    left: 10%;
+    width: 82%;
+    height: 38%;
+   }
+   .limosine li{
+    box-shadow: 0 0 32px #ffffffec;
+    background-color: #ff9d00ec;
+    margin: 8px;
+    border-radius: 22px;
+    border: 2px solid white;
+    padding: 0px 12px;
+    display: inline;
+    font-size: 18px;
+    color: #ffffff;
+   }
+   .limosine:hover{
+    box-shadow: 0 0 32px rgba(251, 150, 9, 0.788);
+    border: 3px solid rgb(195, 229, 230);
+   }
+   .limosine h1{
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+    color: #440854;
+    font-weight: bold;
+    position: absolute;
+    left: 44%;
+    top : 1%;
+   }
+   .limosine h1:hover{
+    text-shadow: 0 0 10px rgb(78, 216, 97);
+    color: #072358;
+    text-decoration: underline;
+    cursor: pointer;
+   }
+   .limosinepic{
+    width: 35%;
+    border-radius: 32px;
+    padding: 9px;
+   }
+   .homemini{
+    border: 2px solid black;
+    padding: 4px;
+    width: 35px;
+    border-radius: 20px;
+    position: absolute;
+    left: 96%;
+   }
+   .homemin{
+    border: 2px solid black;
+    padding: 4px;
+    width: 35px;
+    border-radius: 20px;
+    position: absolute;
+    left: 90%;
+    top: 2%;
+   }
+.homemini:hover{
+  box-shadow: 0 0 44px #ff8000;
+}
+.homemin:hover{
+  box-shadow: 0 0 44px #ff3c00;
+}
+
+
+
+.specsofcar{
+  position: absolute;
+  top: 85%;
+}
+.specsofcar li{
+  font-size: 17px;
+}
+
+.notesmicro{
+  position: absolute;
+  top: 20%;
+  left: 18%;
+  display: inline;
+  width: 72%;
+  font-size: 20px;
+  padding: 12px;
+  color: #f0f9ff;
+  font-weight: bold;
+}
+.noteslimo{
+  position: absolute;
+  top: 18%;
+  left: 38%;
+  display: inline;
+  width: 52%;
+  font-size: 20px;
+  padding: 12px;
+  color: #f0f9ff;
+  font-weight: bold;
+}
+.price{
+  box-shadow: 0 0 16px rgb(58, 236, 165);
+  display: inline;
+  border-radius: 12px;
+  position: absolute;
+  top: 61%;
+  left: 42%;
+  background-color: rgba(238, 255, 0, 0.849);
+  width: 10%;
+  font-size: 18px;
+  padding: 6px 10px;
+  color: #172c3a;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.858);
+}
+.pricelimo{
+  box-shadow: 0 0 16px rgb(58, 236, 165);
+  display: inline;
+  border-radius: 12px;
+  position: absolute;
+  top: 61%;
+  left: 82%;
+  background-color: rgba(238, 255, 0, 0.849);
+  width: 10%;
+  font-size: 18px;
+  padding: 6px 10px;
+  color: #172c3a;
+  font-weight: bold;
+  border: 3px solid rgba(255, 255, 255, 0.858);
+}
+
+
+.historytable{
+  box-shadow: 0 0 14px #39d2f8;
+  /* font-weight: bolder; */
+  width: 60%;
+    font-size: 20px;
+    font-family: 'Baloo Bhai';
+    padding: 68px 25px;
+    background-color: rgba(55, 180, 252, 0.733);
+    color: rgb(255, 255, 255);
+    border-radius: 20px;
+    position: absolute;
+    top: 18%;
+    left: 22%;
+}
+.payment{
+  padding: 6px;
+  margin-top: 4%;
+}
+.historytable:hover{
+  border: 2px solid #5abdff;
+  box-shadow: 0 0 32px #5abdff;
+}
+.historytable h1{
+  font-weight: bold;
+    color: rgb(255, 255, 255);
+    display: inline-block;
+    font-size: 40px;
+    border-bottom: 2px solid rgb(255, 0, 0);
+    margin-bottom: 15px;
+    padding: 4px 0;
+}
+.historytable h1:hover{
+  text-shadow: 0 0 32px rgb(81, 93, 228);
+  cursor: pointer;
+  color: rgb(0, 0, 0);
+  border-bottom: 3px solid rgb(245, 177, 245);
+}
+
+table {
+  text-transform: uppercase;
+  color: aliceblue;
+  /* font-weight: bold; */
+  text-align: center;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td{
+  box-shadow: 0 0 12px #126091cf;
+  text-align: center;
+  border-radius: 12px;
+  border: 1px solid #5abdff;
+  padding: 8px;
+}
+th {
+  box-shadow: 0 0 22px #126091cf;
+  text-decoration: underline;
+  border: 3px solid #5abdff;
+  padding: 8px;
+}
+th:hover{
+  color: #072358;
+  cursor: pointer;
+}
+
+tr:nth-child(odd) {
+  background-color: #3aceff5b;
+  box-shadow: 0 0 12px #3aceff5b;
+}
+
+#popupmsg{
+  opacity: 0.75;
+  margin-top: 4%;
+  z-index: 50;
+  border-radius: 32px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(254, 201, 28, 0.863);
+  box-shadow: 0 0 32px rgb(54, 135, 248);
+}
+
+
+
+.form-gap {
+  padding-top: 70px;
+}
+
+.forgotcontainer{
+  margin-top: 3%;
+  box-shadow: 0 0 14px #39d2f8;
+  font-weight: bolder;
+  font-size: 20px;
+  background-color: rgba(55, 180, 252, 0.733);
+  color: rgb(255, 255, 255);
+  border-radius: 20px;
+  position: absolute;
+  left: 26%;
+  width: 50vw;
+  height: auto;
+  padding: 12px;
+}
+.input-group{
+  padding: 2px;
+  margin:12px 0px;
+  width: 100%;
+  border-bottom: 2px solid rgb(245, 183, 26);
+}
+.input-group:hover{
+  box-shadow: 0 0 24px #13daf4;
+  border-bottom: 3px solid rgb(3, 222, 247);
+}
+.input-group input{
+  background: none;
+  font-size: 20px;
+  width: 65%;
+  outline: none;
+  border: none;
+  
+  color: rgb(255, 228, 212);
+  padding: 5px 10px;
+}
+.forgotlogo{
+  position: relative;
+  left: 46%;
+  width: 72px;
+}
+.forgotbtn{
+  position: relative;
+  bottom: 5%;
+  left: 35%;
+  color: white;
+  font-size: 22;
+  background: none;
+  cursor: pointer;
+  outline: none;
+  width: 35%;
+  margin: 12px 0;
+  padding: 6px;
+  border-radius: 90px;
+  border: 2px solid rgb(245, 183, 26);
+  font-weight: bold;
+}
+.forgotbtn img{
+  position:absolute;
+  left: 7%;
+  top: 8%;
+  width: 30px;
+  padding: 1px;
+}
+.forgotbtn:hover{
+box-shadow: 0 0 34px #b113f4;
+  color: rgb(169, 0, 169);
+  background: rgb(219, 193, 228);
+  outline: none;
+}
+.delbin{
+  width: 22px;
+}
+
+
+/* Responsiveness */
+@media screen and (max-width: 680px)
+{
+  .ulogo{
+    width: 40px;
+  }
+  .feedbackcontainer{
+    display: inline-block;
+    margin-top: 20%;
+    margin-left: 4%;
+    width: 92%;
+    font-size: 14px;
+      background-color: rgba(55, 180, 252, 0.733);
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+  }
+  .qr{
+    font-size: 12px;
+    top: 84%;
+    left: 36%;
+    position: absolute;
+    width: 50%;
+    font-family: 'Baloo Bhai';
+  }
+  .qr i{
+    padding: 12px;
+  }
+  .qr img{
+    width: 92px;
+  }
+  .forgotcontainer{
+    font-size: 16px;
+    position: absolute;
+    left: 0%;
+    width: 100%;
+    height: auto;
+    padding: 12px;
+  }
+  .forgotbtn{
+    left: 0%;
+    width: 100%;
+  }
+  figure video {
+    min-width: 100%;
+  }
+  
+  #navbarSupportedContent{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    position: fixed;
+    top: 2%;
+    right: 0;
+    box-shadow: 0 0 42px aliceblue;
+    padding: 22px;
+    border: 2px solid aliceblue;
+    border-radius: 12px;
+    background-color: rgba(33, 49, 95, 0.877);
+  }
+  .navbar-brand img{
+    left: 0;
+    width: 80px;
+    padding: 0px 12px;
+    position: absolute;
+    top: 0%;
+}
+.navbar li a {
+  padding: 0px 12px;
+}
+.navbar li a:hover{
+  padding: 0px 12px;
+}
+  #myHeader{
+    width: 100%;
+    height: 50px;
+  }
+  .footer-dark {
+    width: 100%;
+    height: 120%;
+    top: 250%;
+    }
+    .micro{
+      top: 15%;
+      width: 85%;
+      height: 60%;
+     }
+     .micro li{
+      box-shadow: 0 0 32px #ffffffec;
+      background-color: #0095ffbb;
+      margin: 8px;
+      border-radius: 22px;
+      border: 2px solid white;
+      padding: 0px 12px;
+      display: inline;
+      font-size: 18px;
+      color: #ffffff;
+     }
+     .micropic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suvpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .limosinepic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .sedanpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suv{
+      top: 80%;
+      width: 85%;
+      height: 60%;
+     }
+     .sedan{
+      top: 145%;
+      width: 85%;
+      height: 60%;
+     }
+     .limosine{
+      top: 210%;
+      width: 85%;
+      height: 60%;
+     }
+     .limosine h1{
+      position: absolute;
+      left: 24%;
+     }
+     .specsofcar{
+      border-radius: 0%;
+      display:table-row;
+      top: 58%;
+    }
+    .specsofcar1{
+      border-radius: 0%;
+      display:table-row;
+      top: 72%;
+    }
+    .specsofcar1 li{
+      display:inline-flex;
+      font-size: 10px;
+    }
+    .specsofcar li{
+      display:inline-flex;
+      font-size: 10px;
+    }
+    .notesmicro{
+      position: absolute;
+      top: 10%;
+      left: 1%;
+      text-align: justify;
+      display: inline;
+      width: 100%;
+      font-size: 12px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .noteslimo{
+      position: absolute;
+      top: 7%;
+      left: 2%;
+      display: inline;
+      text-align: justify;
+      width: 100%;
+      font-size: 12px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .price{
+      top: 42%;
+      left: 36%;
+      width: 42%;
+    }
+    .pricelimo{
+      top: 40%;
+      left: 36%;
+      width: 42%;
+    }
+    .homemini{
+      width: 27px;
+      left: 88%;
+     }
+     .homemin{
+      width: 27px;
+      left: 90%;
+      top: 2%;
+     }
+     .cust_book{
+      height: 98%;
+      width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .cust_book1{
+        width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .historytable{
+      width: 100%;
+        font-size: 12px;
+        top: 18%;
+        left: 0%;
+    }
+
+}
+
+/* @media screen and (max-width: 840px)
+{
+  #navbarSupportedContent{
+    text-align: center;
+    box-shadow: 0 0 42px aliceblue;
+    padding: 22px;
+    border: 2px solid aliceblue;
+    border-radius: 12px;
+    background-color: rgba(33, 49, 95, 0.877);
+  }
+  .navbar-brand img{
+    width: 60px;
+    padding: 0px 9px;
+    position: absolute;
+    top: 0%;
+    left: 0%;
+}
+  #myHeader{
+    width: 100%;
+    height: 40px;
+  }
+  .footer-dark {
+    width: 100%;
+    height: 90%;
+    top: 380%;
+    }
+    .micro{
+      top: 40%;
+      width: 85%;
+      height: 88%;
+     }
+     .micro li{
+      box-shadow: 0 0 32px #ffffffec;
+      background-color: #0095ffbb;
+      margin: 8px;
+      border-radius: 22px;
+      border: 2px solid white;
+      padding: 0px 12px;
+      display: inline;
+      font-size: 18px;
+      color: #ffffff;
+     }
+     .micropic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suvpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .limosinepic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .sedanpic{
+      width: 25%;
+      border-radius: 12px;
+     }
+     .suv{
+      top: 140%;
+      width: 85%;
+      height: 88%;
+     }
+     .sedan{
+      top: 240%;
+      width: 85%;
+      height: 88%;
+     }
+     .limosine{
+      top: 340%;
+      width: 85%;
+      height: 88%;
+     }
+     .specsofcar{
+      border-radius: 0%;
+      display:table-row;
+      top: 78%;
+    }
+    .notesmicro{
+      position: absolute;
+      top: 17%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .noteslimo{
+      position: absolute;
+      top: 10%;
+      left: 2%;
+      display: inline;
+      width: 100%;
+      font-size: 20px;
+      padding: 12px;
+      color: #f0f9ff;
+      font-weight: bold;
+    }
+    .price{
+      top: 64%;
+      left: 36%;
+      width: 42%;
+    }
+    .pricelimo{
+      top: 60%;
+      left: 36%;
+      width: 42%;
+    }
+    .homemini{
+      left: 88%;
+     }
+     .homemin{
+      left: 90%;
+      top: 2%;
+     }
+     .cust_book{
+      height: 98%;
+      width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .cust_book1{
+        width: 96%;
+        left: 2%;
+        top: 18%;
+    }
+    .historytable{
+      width: 100%;
+        font-size: 12px;
+        top: 18%;
+        left: 0%;
+    }
+} */

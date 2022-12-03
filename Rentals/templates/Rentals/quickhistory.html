@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% block title %} Schedule Ride {% endblock title %}
+{% block body %}
+
+<div class="historytable">
+    <a href="/"><img src="/static/styles/Images&Gifs/homeico.png" class="homemin"></a>
+      <h1>ON THE GO HISTORY</h1>
+      <table>
+      <tr>
+        <th>SOURCE</th>
+        <th>DESTINATION</th>
+        <th>PHONE</th>
+        <th>CAR TYPE</th>
+        <th>Cancel</th>
+      </tr>
+      {% for i in travel_list %}
+      <tr>
+        <td>{{i.source}}</td>
+        <td>{{i.destination}}</td>
+        <td>{{i.phone}}</td>
+        <td>{{i.cartype}}</td>
+        <td><a href="delete1/{{ i.id }}"><img src="/static/styles/Images&Gifs/bin.png" class="delbin"></a></td>
+      </tr>
+      {% endfor %}
+      </table>
+      <h1 class="payment">Pay your dues here </h1><form><script src="https://checkout.razorpay.com/v1/payment-button.js" data-payment_button_id="pl_KnLeWBdEYw7nhW" async> </script> </form>
+
+  </div>
+  
+{% endblock body %}
