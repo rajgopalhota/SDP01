@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% block title %} Forgot Password {% endblock title %}
+{% block body %}
+<div class="form-gap"></div>
+<div class="forgotcontainer">
+    <img src="/static/styles/Images&Gifs/key.png" class="forgotlogo">
+    <h2 class="text-center">Forgot Password?</h2>
+    <div class="forgotbody">
+        <form autocomplete="off" class="forgotform" method="post" action="">
+            {% csrf_token %}
+            <h5>Enter Username.</h5>
+            <div class="input-group">
+                <input name="uname" placeholder="Enter Username" type="text">
+            </div>
+            <h5>Enter OTP.</h5>
+            <div class="input-group">
+                <input name="otp" placeholder="Recieved OTP" type="number">
+            </div>
+            <h5>Enter Password.</h5>
+            <div class="input-group">
+                <input name="pass" placeholder="Enter Password" type="password">
+            </div>
+            <h5>Re-Enter Password.</h5>
+            <div class="input-group">
+                <input name="pass1" placeholder="Re-Enter Password" type="password">
+            </div>
+            <button class="forgotbtn" type="submit"><img src="/static/styles/Images&Gifs/book.png">Submit</button>
+        </form>
+    </div>
+</div>
+<script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
+{% endblock body %}
