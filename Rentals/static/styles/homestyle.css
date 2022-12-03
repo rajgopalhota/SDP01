@@ -133,14 +133,15 @@ body{
   box-shadow: 0 0 32px #5abdff;
 }
 .feedbody{
+  color: white;
   margin-top: 1%;
   border-radius: 23px;
   padding: 12px;
   background-color: rgba(0, 0, 0, 0.675);
 }
 .feedinfo{
+  border-radius: 23px;
   color: black;
-  text-align: center;
   background-color: rgba(207, 116, 18, 0.89);
   padding: 12px;
 }
