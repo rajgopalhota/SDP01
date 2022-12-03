@@ -29,7 +29,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-iloicx@gvutmpsj4pjtxk+u152ooq)%b25*799c0xd7xo2kf4e'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['*']
 
@@ -58,19 +58,13 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'SDP.urls'
-SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
-TEMPLATES_PATH = os.path.join(SETTINGS_PATH, 'templates')
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [TEMPLATES_PATH,
-                 os.path.join(TEMPLATES_PATH, 'abstract_spacecraft'),
-                 os.path.join(TEMPLATES_PATH, 'accounts'),
-                 os.path.join(TEMPLATES_PATH, 'cd_editor'),
-                 os.path.join(TEMPLATES_PATH, 'database')],
+        'DIRS': [],
         'APP_DIRS': True,
         'OPTIONS': {
-            'debug': True,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
