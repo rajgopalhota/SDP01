@@ -26,11 +26,13 @@
     <div class="feedbody">
         {% for comment in comments %}
         <div class="row my-3">
-            <div class="col-md-1  ">
-                <img class="rounded mx-auto d-block w-100 p-2" src="/static/styles/Images&Gifs/user.png" alt="user">
+            <div class="col-md-1">
+                <div class="ulogo">
+                    <img class="rounded mx-auto d-block w-100 p-2" src="/static/styles/Images&Gifs/user.png" alt="user">
+                </div>
             </div>
             <div class="col-md-11 ">
-                <b> {{comment.user.username}} </b> at {{comment.timestamp}}
+                <b> {{comment.user.username}} </b> <span>at {{comment.timestamp}}</span>
                 <div> {{comment.comment}} </div>
             </div>
         </div>

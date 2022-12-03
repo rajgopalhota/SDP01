@@ -139,6 +139,12 @@ body{
   padding: 12px;
   background-color: rgba(0, 0, 0, 0.675);
 }
+.feedbody b{
+  color: #13daf4;
+}
+.feedbody span{
+  color: #b53dff;
+}
 .feedinfo{
   border-radius: 23px;
   color: black;
@@ -902,6 +908,19 @@ box-shadow: 0 0 34px #b113f4;
 /* Responsiveness */
 @media screen and (max-width: 680px)
 {
+  .ulogo{
+    width: 40px;
+  }
+  .feedbackcontainer{
+    display: inline-block;
+    margin-top: 20%;
+    margin-left: 4%;
+    width: 92%;
+    font-size: 14px;
+      background-color: rgba(55, 180, 252, 0.733);
+      color: rgb(255, 255, 255);
+      border-radius: 20px;
+  }
   .qr{
     font-size: 12px;
     top: 84%;
