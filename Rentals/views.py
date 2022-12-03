@@ -86,8 +86,11 @@ def LoginOut(request):
 
 def BookingHistory(request):
     if request.user.is_authenticated:
-        username = request.user.username
-        travel_list = BookedForLater.objects.filter(user_name = username)
+        if request.user.is_staff == True:
+            travel_list = BookedForLater.objects.all()
+        else:
+            username = request.user.username
+            travel_list = BookedForLater.objects.filter(user_name = username)
         return render(request, 'Rentals/history.html', {'travel_list':travel_list})
     messages.error(request, 'Please, Login First!')
     return redirect('/')
