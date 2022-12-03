@@ -58,13 +58,19 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'SDP.urls'
-
+SETTINGS_PATH = os.path.dirname(os.path.dirname(__file__))
+TEMPLATES_PATH = os.path.join(SETTINGS_PATH, 'templates')
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [TEMPLATES_PATH,
+                 os.path.join(TEMPLATES_PATH, 'abstract_spacecraft'),
+                 os.path.join(TEMPLATES_PATH, 'accounts'),
+                 os.path.join(TEMPLATES_PATH, 'cd_editor'),
+                 os.path.join(TEMPLATES_PATH, 'database')],
         'APP_DIRS': True,
         'OPTIONS': {
+            'debug': True,
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
