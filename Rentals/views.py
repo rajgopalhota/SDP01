@@ -70,7 +70,7 @@ def Register(request):
                 #content
             plain_message,
                 #from email
-            'taxies24hrs@gmail.com',
+            'taxies24hr@gmail.com',
                 #reciepents
             [email]
             )
@@ -132,7 +132,7 @@ def Forgot(request):
                 #content
                 plain_message,
                 #from email
-                'taxies24hrs@gmail.com',
+                'taxies24hr@gmail.com',
                 #reciepents
                 [email]
             )
@@ -245,7 +245,7 @@ def confirmmail(request,srce,dest):
         #content
         plain_message,
         #from email
-        'taxies24hrs@gmail.com',
+        'taxies24hr@gmail.com',
         #reciepents
         [email]
     )
@@ -285,7 +285,7 @@ def delete(request, id):
         #content
         plain_message,
         #from email
-        'taxies24hrs@gmail.com',
+        'taxies24hr@gmail.com',
         #reciepents
             [email]
         )   
@@ -310,7 +310,7 @@ def delete1(request, id):
         #content
         plain_message,
         #from email
-        'taxies24hrs@gmail.com',
+        'taxies24hr@gmail.com',
         #reciepents
             [email]
         )   
