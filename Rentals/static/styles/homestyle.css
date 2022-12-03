@@ -903,6 +903,9 @@ box-shadow: 0 0 34px #b113f4;
   background: rgb(219, 193, 228);
   outline: none;
 }
+.delbin{
+  width: 22px;
+}
 
 
 /* Responsiveness */

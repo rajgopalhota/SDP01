@@ -258,3 +258,29 @@ def Feedback(request):
     comments= FeedbackDB.objects.all()
     context={'comments': comments, 'user': request.user}
     return render(request,'Rentals/blog.html', context)
+
+
+def delete(request, id):
+    if request.user.is_authenticated:
+        email = request.user.email
+        member = BookedForLater.objects.get(id=id)
+        member.delete()
+        html_message = render_to_string('Rentals/confirmemail.html')
+        plain_message = strip_tags(html_message)
+        mail = EmailMultiAlternatives(
+        #subject
+        'RIDE CONFIRMATION',
+        #content
+        plain_message,
+        #from email
+        'taxies24hrs@gmail.com',
+        #reciepents
+            [email]
+        )   
+        mail.attach_alternative(html_message, "text/html")
+        mail.send()
+        messages.success(request, "Ride deleted succesfully")
+        return redirect('/history')
+    else:
+        messages.error(request, "Please Login first")
+        return redirect('/')

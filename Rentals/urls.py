@@ -13,4 +13,5 @@ urlpatterns = [
     path('feedback/', views.Feedback, name = 'feedback'),
     path('history/', views.BookingHistory, name = 'history'),
     path('loginout/', views.LoginOut, name = 'history'),
+    path('history/delete/<int:id>/', views.delete, name='delete'),
 ]
