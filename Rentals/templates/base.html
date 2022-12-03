@@ -54,9 +54,15 @@
                 <a class="nav-link active" href="/#sedan"><b>SEDAN</b></a>
               </li>
               &nbsp;
+              {% if user.is_authenticated %}
               <li>
-                <a class="nav-link active" href="/#limosine"><b>LIMOUSINE</b></a>
+                <a class="nav-link active" href="https://rzp.io/l/eddJGwQJc"><b>PAYMENTS</b></a>
               </li>
+              {% else %}
+              <li>
+                <a class="nav-link active" href=""><b>PAYMENTS</b></a>
+              </li>
+              {% endif %}
               &nbsp;
               &nbsp;
               <li>

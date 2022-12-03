@@ -24,9 +24,14 @@
             <div class="input-group">
                 <input name="pass1" placeholder="Re-Enter Password" type="password">
             </div>
-            <button class="forgotbtn" type="submit"><img src="/static/styles/Images&Gifs/book.png">Send Email</button>
+            <button class="forgotbtn" type="submit"><img src="/static/styles/Images&Gifs/book.png">Submit</button>
         </form>
     </div>
 </div>
-
+<script type="text/javascript">
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
+</script>
 {% endblock body %}

@@ -219,10 +219,10 @@ def Ridelater(request):
 def confirmmail(request,srce,dest):
     email = request.user.email
     print(email)
-    digits = "0123456789"
+    digits = "6789"
     price = ""
     for i in range(3):
-        price += digits[math.floor(random.random() * 10)]
+        price += digits[math.floor(random.random() * 4)]
     # msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
     context= {'source':srce,'destination':dest, 'price':price}
     html_message = render_to_string('Rentals/confirmemail.html', context)

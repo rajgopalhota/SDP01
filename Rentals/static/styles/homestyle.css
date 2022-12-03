@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
 }
+
 .navbar-toggler-icon{
   z-index: -1;
   font-size: 22px;
@@ -696,6 +697,10 @@ body{
     top: 18%;
     left: 22%;
 }
+.payment{
+  padding: 6px;
+  margin-top: 4%;
+}
 .historytable:hover{
   border: 2px solid #5abdff;
   box-shadow: 0 0 32px #5abdff;
@@ -1034,6 +1039,7 @@ box-shadow: 0 0 34px #b113f4;
         top: 18%;
         left: 0%;
     }
+
 }
 
 /* @media screen and (max-width: 840px)

@@ -42,5 +42,10 @@
     var yyyy = today.getFullYear();
     today = yyyy + '-' + mm + '-' + dd;
     $('#date_picker').attr('min',today);
+
+    window.history.forward();
+    function noBack() {
+        window.history.forward();
+    }
 </script>
 {% endblock body %}
