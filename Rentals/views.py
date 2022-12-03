@@ -210,17 +210,21 @@ def Ridelater(request):
             else:
                 ride = BookedForLater(user_name = username, source = srce, destination = dest,date = sdate,time = stime, cartype = type, phone = phone)
                 ride.save()
-                confirmmail(request, srce,dest,sdate,stime)
+                confirmmail(request, srce,dest)
                 messages.success(request, 'Congratulations, Your cab has booked')
         return render(request, 'Rentals/schedule.html')
     messages.error(request, 'Please, Login First!')
     return redirect('/')
 
-def confirmmail(request,srce,dest,sdate,stime):
+def confirmmail(request,srce,dest):
     email = request.user.email
     print(email)
+    digits = "0123456789"
+    price = ""
+    for i in range(3):
+        price += digits[math.floor(random.random() * 10)]
     # msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
-    context= {'source':srce,'destination':dest, 'date':sdate, 'time': stime}
+    context= {'source':srce,'destination':dest, 'price':price}
     html_message = render_to_string('Rentals/confirmemail.html', context)
     plain_message = strip_tags(html_message)
     mail = EmailMultiAlternatives(
