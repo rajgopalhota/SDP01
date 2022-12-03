@@ -95,6 +95,18 @@ def BookingHistory(request):
     messages.error(request, 'Please, Login First!')
     return redirect('/')
 
+
+def QuickBookingHistory(request):
+    if request.user.is_authenticated:
+        if request.user.is_staff == True:
+            travel_list = RidesRightNow.objects.all()
+        else:
+            username = request.user.username
+            travel_list = RidesRightNow.objects.filter(user_name = username)
+        return render(request, 'Rentals/quickhistory.html', {'travel_list':travel_list})
+    messages.error(request, 'Please, Login First!')
+    return redirect('/')
+
 def home(request):
     return render(request, 'Rentals/home.html')
 
@@ -269,7 +281,7 @@ def delete(request, id):
         plain_message = strip_tags(html_message)
         mail = EmailMultiAlternatives(
         #subject
-        'RIDE DELETION',
+        'RIDE CANCELLATION',
         #content
         plain_message,
         #from email
@@ -281,6 +293,31 @@ def delete(request, id):
         mail.send()
         messages.success(request, "Ride deleted succesfully")
         return redirect('/history')
+    else:
+        messages.error(request, "Please Login first")
+        return redirect('/')
+
+def delete1(request, id):
+    if request.user.is_authenticated:
+        email = request.user.email
+        member = RidesRightNow.objects.get(id=id)
+        member.delete()
+        html_message = render_to_string('Rentals/cancel.html')
+        plain_message = strip_tags(html_message)
+        mail = EmailMultiAlternatives(
+        #subject
+        'RIDE CANCELLATION',
+        #content
+        plain_message,
+        #from email
+        'taxies24hrs@gmail.com',
+        #reciepents
+            [email]
+        )   
+        mail.attach_alternative(html_message, "text/html")
+        mail.send()
+        messages.success(request, "Ride deleted succesfully")
+        return redirect('/quickhistory')
     else:
         messages.error(request, "Please Login first")
         return redirect('/')

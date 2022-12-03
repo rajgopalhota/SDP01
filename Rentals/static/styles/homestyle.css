@@ -53,7 +53,7 @@ body{
 }
 .navbar li{
     display: inline-block;
-    font-size: 22px;
+    font-size: 20px;
     background-color: rgba(255, 224, 68, 0.854);
     border-radius: 50px;
     border: 2px solid rgba(0, 163, 46, 0.906);

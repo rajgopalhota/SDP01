@@ -12,6 +12,8 @@ urlpatterns = [
     path('aboutus/', views.AboutUs, name = 'aboutus'),
     path('feedback/', views.Feedback, name = 'feedback'),
     path('history/', views.BookingHistory, name = 'history'),
+    path('quickhistory/', views.QuickBookingHistory, name = 'quickhistory'),
     path('loginout/', views.LoginOut, name = 'history'),
     path('history/delete/<int:id>/', views.delete, name='delete'),
+    path('quickhistory/delete1/<int:id>/', views.delete1, name='delete1'),
 ]
