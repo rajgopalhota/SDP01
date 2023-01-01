@@ -267,7 +267,7 @@ def Feedback(request):
         comment=FeedbackDB(comment= comment, user=user)
         comment.save()
         messages.success(request, "Your comment has been posted successfully")
-    comments= FeedbackDB.objects.all()
+    comments= FeedbackDB.objects.all().order_by('sno').reverse()
     context={'comments': comments, 'user': request.user}
     return render(request,'Rentals/blog.html', context)
 
