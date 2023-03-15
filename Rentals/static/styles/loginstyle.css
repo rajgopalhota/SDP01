@@ -1,6 +1,17 @@
-*{
-    margin: 0;
-    padding: 0;
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+}
+body {
+  max-width: 100dvw;
+  overflow-x: hidden;
+  z-index: -999;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .slogan{
     color: aliceblue;
@@ -104,7 +115,6 @@ body{
 }
 .typewriter h1 {
     color: rgb(255, 255, 255);
-    font-family: monospace;
     overflow: hidden;
     border-right: .15em solid orange;
     white-space: nowrap;
@@ -192,7 +202,6 @@ body{
 #invLog{
     z-index: 1;
     display: flex;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     color: aliceblue;
     border-radius: 10px;
     background-color: rgba(246, 105, 29, 0.758);

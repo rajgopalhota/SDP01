@@ -1,6 +1,17 @@
-*{
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800&display=swap");
+
+* {
   margin: 0;
   padding: 0;
+}
+body {
+  max-width: 100dvw;
+  overflow-x: hidden;
+  z-index: -999;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
   *, *:before, *:after {
     box-sizing: inherit;
