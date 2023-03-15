@@ -29,9 +29,6 @@ html {
   backdrop-filter: blur(12px);
   border-bottom: 2px solid rgb(59, 59, 59);
 }
-.container-fluid{
-  padding: 0;
-}
 #myHeader:hover {
   box-shadow: 0 0 28px rgba(5, 5, 5, 0.836);
 }
@@ -876,7 +873,7 @@ tr:nth-child(odd) {
 }
 
 /* Responsiveness */
-@media screen and (max-width: 680px) {
+@media only screen and (max-width: 600px) {
   .ulogo {
     width: 40px;
   }
@@ -920,10 +917,6 @@ tr:nth-child(odd) {
   }
   .navbar li a:hover {
     padding: 0px 12px;
-  }
-  #myHeader {
-    width: 100%;
-    height: 80px;
   }
   .footer-dark {
     width: 100%;
