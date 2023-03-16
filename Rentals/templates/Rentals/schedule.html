@@ -8,19 +8,19 @@
     <form method="POST" action="">
         {% csrf_token %}
         <div class="box">
-            FROM:<input type="text" class="in_box" name="s_from">
+            <label>FROM:</label><input type="text" class="in_box" name="s_from">
         </div>
         <div class="box">
-            TO:<input type="text" class="in_box" name="s_dest">
+            <label>TO:</label><input type="text" class="in_box" name="s_dest">
         </div>
         <div class="box">
-            DATE:<input id="date_picker" type="date" class="in_box" name="s_date">
+            <label>DATE:</label><input id="date_picker" type="date" class="in_box" name="s_date">
         </div>
         <div class="box">
-            TIME:<input type="time" class="in_box" name="s_time">
+            <label>TIME:</label><input type="time" class="in_box" name="s_time">
         </div>
         <div class="box">
-            CAR TYPE:<select name="s_optedcar" class="typedown">
+            <label>TYPE:</label><select name="s_optedcar" class="typedown">
                 <option value="Anything">Anything</option>
                 <option value="Micro">Micro</option>
                 <option value="SUV">SUV</option>
@@ -29,7 +29,7 @@
             </select>
         </div>
         <div class="box">
-            PHONE:<input type="number" class="in_box" name="s_phone">
+            <label>PHONE:</label><input type="number" class="in_box" name="s_phone">
         </div>
         <button class="cust_btn" type="submit"><img src="/static/styles/Images&Gifs/book.png">BOOK</button>
 

@@ -4,15 +4,6 @@
   margin: 0;
   padding: 0;
 }
-body {
-  max-width: 100dvw;
-  overflow-x: hidden;
-  z-index: -999;
-  margin: 0;
-  font-family: "Poppins", sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
 html {
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -34,6 +25,8 @@ body {
   background: url(/static/styles/Images&Gifs/hmbg.jpg) no-repeat center center
     fixed;
   background-size: cover;
+  overflow-x: hidden;
+  font-family: "Poppins", sans-serif;
 }
 .navbar ul {
   margin-left: auto;
@@ -53,10 +46,9 @@ body {
   font-size: 24px;
 }
 .navbar-brand span{
-  letter-spacing: 2px;
   font-size: 26px;
-  color: orange;
-  text-shadow: 0 0 2px black;
+  color: rgb(157, 15, 157);
+  text-shadow: 0 0 2px rgb(255, 255, 255);
 }
 .hover-underline-animation {
   display: inline-block;
@@ -107,7 +99,8 @@ body {
   font-weight: bolder;
   background-color: transparent;
   border: none;
-  color: rgb(0, 0, 0);
+  color: rgb(8, 0, 27);
+  font-size: 24px;
   text-align: center;
   float: right;
   width: 62%;
@@ -181,6 +174,7 @@ body {
 
 /* Booking Table */
 .cust_book {
+  font-family: "Poppins", sans-serif;
   box-shadow: 0 0 12px #39d2f8;
   width: 36%;
   height: fit-content;
@@ -202,16 +196,17 @@ body {
   box-shadow: 0 0 12px #5abdff;
 }
 .cust_book h1 {
+  mix-blend-mode: overlay;
   font-weight: bold;
   color: rgb(255, 255, 255);
   display: inline-block;
-  font-size: 40px;
+  font-size: 42px;
   border-bottom: 2px solid rgb(255, 0, 0);
-  margin-bottom: 15px;
+  margin-bottom: 0;
   padding: 4px 0;
 }
 .cust_book h1:hover {
-  transition: all ease-in 1s;
+  transition: all ease-in 0.5s;
   text-shadow: 0 0 32px rgb(81, 93, 228);
   cursor: pointer;
   color: rgb(0, 0, 0);
@@ -229,14 +224,23 @@ body {
   box-shadow: 0 0 20px #13daf4bc;
   border-bottom: 3px solid rgb(3, 222, 247);
 }
+.box label{
+  font-size: 24px;
+  font-family: "Poppins", sans-serif;
+  letter-spacing: 2px;
+  font-weight: 400;
+  text-shadow:0 0 6px black;
+}
 .box input {
   background: none;
-  font-size: 20px;
+  font-size: 24px;
   margin: auto;
   width: 60%;
   outline: none;
   border: none;
-  color: rgb(255, 228, 212);
+  text-shadow: 0 0 4px black;
+  letter-spacing: 2px;
+  color: rgb(255, 246, 241);
   padding: 5px 10px;
 }
 .box i {
@@ -292,16 +296,17 @@ body {
   box-shadow: 0 0 12px #5abdff;
 }
 .cust_book1 h1 {
+  mix-blend-mode: overlay;
   font-weight: bold;
   color: rgb(255, 255, 255);
   display: inline-block;
-  font-size: 40px;
+  font-size: 42px;
   border-bottom: 2px solid rgb(255, 0, 0);
-  margin-bottom: 15px;
+  margin-bottom: 0;
   padding: 4px 0;
 }
 .cust_book1 h1:hover {
-  transition: all ease-in-out 1s;
+  transition: all ease-in-out 0.5s;
   text-shadow: 0 0 32px rgb(81, 93, 228);
   cursor: pointer;
   color: rgb(0, 0, 0);
@@ -730,23 +735,25 @@ body {
 }
 
 .historytable {
+  margin: auto;
+  margin-top: 10%;
   box-shadow: 0 0 14px #39d2f8;
-  /* font-weight: bolder; */
+  backdrop-filter: blur(4px);
   width: 60%;
+  min-width: fit-content;
   font-size: 20px;
   padding: 68px 25px;
-  background-color: rgba(55, 180, 252, 0.733);
+  background-color: rgba(55, 180, 252, 0.428);
   color: rgb(255, 255, 255);
+  border: 2px solid #d6efff;
   border-radius: 20px;
-  position: absolute;
-  top: 18%;
-  left: 22%;
 }
 .payment {
   padding: 6px;
   margin-top: 4%;
 }
 .historytable:hover {
+  transition: all ease-in-out 0.5s;
   border: 2px solid #5abdff;
   box-shadow: 0 0 32px #5abdff;
 }
@@ -754,7 +761,7 @@ body {
   font-weight: bold;
   color: rgb(255, 255, 255);
   display: inline-block;
-  font-size: 40px;
+  font-size: 32px;
   border-bottom: 2px solid rgb(255, 0, 0);
   margin-bottom: 15px;
   padding: 4px 0;
@@ -835,7 +842,7 @@ tr:nth-child(odd) {
   width: 100%;
   border-bottom: 2px solid rgb(245, 183, 26);
 }
-.input-group:hover {
+.input-group:focus-within {
   box-shadow: 0 0 24px #13daf4;
   border-bottom: 3px solid rgb(3, 222, 247);
 }
@@ -845,7 +852,6 @@ tr:nth-child(odd) {
   width: 65%;
   outline: none;
   border: none;
-
   color: rgb(255, 228, 212);
   padding: 5px 10px;
 }
@@ -889,8 +895,26 @@ tr:nth-child(odd) {
 
 /* Responsiveness */
 @media only screen and (max-width: 600px) {
+  .historytable{
+    margin-top: 25%;
+    font-size: 20px;
+  padding: 28px 5px;
+  border-radius: 12px;
+  }
+  .historytable h1{
+    font-size: 18px;
+  }
   .ulogo {
     width: 40px;
+  }
+  .box label{
+    font-size: 17px;
+  }
+  .box input {
+    font-size: 17px;
+  }
+  .typedown{
+    font-size: 17px;
   }
   .feedbackcontainer {
     display: inline-block;
@@ -1066,5 +1090,6 @@ tr:nth-child(odd) {
     top: 18%;
     left: 0%;
   }
+  
 }
 
