@@ -18,9 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 #myHeader {
-  position: fixed;
-  top: 0;
-  left: 0;
+  
   background-color: rgba(68, 184, 230, 0.073);
   box-shadow: 0 0 27px rgb(65, 65, 65);
   width: 100%;
@@ -89,16 +87,18 @@ body {
 }
 
 .typedown {
+  margin: auto;
   font-weight: bolder;
-  background-color: rgba(55, 180, 252, 0.126);
+  background-color: transparent;
   border: none;
   color: rgb(0, 0, 0);
-  position: relative;
-  left: 12%;
+  text-align: center;
+  float: right;
   width: 62%;
-  padding: 6px 18px;
+  padding: 4px 8px;
+  border-radius: 25px;
 }
-.typedown:hover {
+.typedown:focus-within {
   box-shadow: 0 0 34px #19e9f4;
 }
 
@@ -203,19 +203,21 @@ body {
 }
 .box {
   text-align: left;
-  padding: 2px;
+  padding: 12px;
   margin: 12px 0px;
   width: 100%;
-  border-bottom: 2px solid rgb(245, 183, 26);
+  border-bottom: 3px solid rgb(245, 183, 26);
+  border-radius: 25px;
 }
-.box:hover {
-  box-shadow: 0 0 10px #13daf4bc;
-  border-bottom: 2px solid rgb(3, 222, 247);
+.box:focus-within {
+  box-shadow: 0 0 20px #13daf4bc;
+  border-bottom: 3px solid rgb(3, 222, 247);
 }
 .box input {
   background: none;
   font-size: 20px;
-  width: 50%;
+  margin: auto;
+  width: 60%;
   outline: none;
   border: none;
   color: rgb(255, 228, 212);
@@ -910,10 +912,10 @@ tr:nth-child(odd) {
     width: 100%;
   }
   .navbar li a {
-    padding: 0px 12px;
+    padding: 8px 12px;
   }
   .navbar li a:hover {
-    padding: 0px 12px;
+    padding: 8px 12px;
   }
   .footer-dark {
     width: 100%;
@@ -1033,7 +1035,6 @@ tr:nth-child(odd) {
     top: 2%;
   }
   .cust_book {
-    height: 98%;
     width: 96%;
     left: 2%;
     top: 18%;
