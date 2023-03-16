@@ -55,6 +55,7 @@ body {
   text-shadow: 0 0 6px white;
 }
 .navbar-brand span{
+  letter-spacing: 2px;
   font-size: 26px;
   color: orange;
   text-shadow: 0 0 12px black;
@@ -164,20 +165,25 @@ body {
 
 /* Booking Table */
 .cust_book {
-  /* font-weight: bold; */
-  font-size: 20px;
-  padding: 60px 25px;
-  background-color: rgba(55, 180, 252, 0.733);
-  color: rgb(255, 255, 255);
-  border-radius: 20px;
+  box-shadow: 0 0 12px #39d2f8;
   width: 36%;
+  height: fit-content;
+  font-size: 20px;
+  padding: 68px 25px;
+  background-color: rgba(55, 180, 252, 0.457);
+  backdrop-filter: blur(4px);
+  border: 2px solid #d0ecff;
+  color: rgb(255, 255, 255);
+  border-radius: 12px;
   position: absolute;
   top: 18%;
   left: 32%;
+  text-align: center;
 }
 .cust_book:hover {
+  background-color: rgba(55, 180, 252, 0.457);
   border: 2px solid #5abdff;
-  box-shadow: 0 0 32px #5abdff;
+  box-shadow: 0 0 12px #5abdff;
 }
 .cust_book h1 {
   font-weight: bold;
@@ -189,26 +195,27 @@ body {
   padding: 4px 0;
 }
 .cust_book h1:hover {
+  transition: all ease-in 1s;
   text-shadow: 0 0 32px rgb(81, 93, 228);
-  font-size: 42px;
   cursor: pointer;
   color: rgb(0, 0, 0);
-  border-bottom: 3px solid rgb(245, 177, 245);
+  border-bottom: 2px solid rgb(245, 177, 245);
 }
 .box {
+  text-align: left;
   padding: 2px;
   margin: 12px 0px;
   width: 100%;
   border-bottom: 2px solid rgb(245, 183, 26);
 }
 .box:hover {
-  box-shadow: 0 0 24px #13daf4;
-  border-bottom: 3px solid rgb(3, 222, 247);
+  box-shadow: 0 0 10px #13daf4bc;
+  border-bottom: 2px solid rgb(3, 222, 247);
 }
 .box input {
   background: none;
   font-size: 20px;
-  width: 65%;
+  width: 50%;
   outline: none;
   border: none;
   color: rgb(255, 228, 212);
@@ -221,9 +228,6 @@ body {
 }
 
 .cust_btn {
-  position: absolute;
-  top: 86%;
-  left: 35%;
   color: white;
   font-size: 22;
   background: none;
@@ -237,9 +241,6 @@ body {
   font-weight: bold;
 }
 .cust_btn img {
-  position: absolute;
-  left: 7%;
-  top: 8%;
   width: 30px;
   padding: 1px;
 }
@@ -252,22 +253,25 @@ body {
 
 /* Book Now */
 .cust_book1 {
-  box-shadow: 0 0 14px #39d2f8;
-  /* font-weight: bolder; */
+  box-shadow: 0 0 12px #39d2f8;
   width: 36%;
-  height: 72%;
+  height: fit-content;
   font-size: 20px;
   padding: 68px 25px;
-  background-color: rgba(55, 180, 252, 0.733);
+  background-color: rgba(55, 180, 252, 0.457);
+  backdrop-filter: blur(4px);
+  border: 2px solid #d0ecff;
   color: rgb(255, 255, 255);
-  border-radius: 20px;
+  border-radius: 12px;
   position: absolute;
   top: 18%;
   left: 32%;
+  text-align: center;
 }
 .cust_book1:hover {
+  background-color: rgba(55, 180, 252, 0.457);
   border: 2px solid #5abdff;
-  box-shadow: 0 0 32px #5abdff;
+  box-shadow: 0 0 12px #5abdff;
 }
 .cust_book1 h1 {
   font-weight: bold;
@@ -279,32 +283,25 @@ body {
   padding: 4px 0;
 }
 .cust_book1 h1:hover {
+  transition: all ease-in-out 1s;
   text-shadow: 0 0 32px rgb(81, 93, 228);
-  font-size: 42px;
   cursor: pointer;
   color: rgb(0, 0, 0);
   border-bottom: 3px solid rgb(245, 177, 245);
 }
 .cust_bn {
-  position: absolute;
-  top: 83%;
-  left: 35%;
   color: white;
   font-size: 22;
   background: none;
   cursor: pointer;
   outline: none;
   width: 35%;
-  margin: 12px 0;
   padding: 6px;
   border-radius: 90px;
   border: 2px solid rgb(245, 183, 26);
   font-weight: bold;
 }
 .cust_bn img {
-  position: absolute;
-  left: 7%;
-  top: 8%;
   width: 30px;
   padding: 1px;
 }
