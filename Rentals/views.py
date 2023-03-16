@@ -10,9 +10,11 @@ import datetime
 from django.core.mail import send_mail, EmailMultiAlternatives
 from django.template.loader import render_to_string
 from django.utils.html import strip_tags
-from .models import  BookedForLater,RidesRightNow, FeedbackDB
+from .models import BookedForLater, RidesRightNow, FeedbackDB
 from django.db.models import F
-import math, random, time
+import math
+import random
+import time
 
 
 # Create your views here.
@@ -20,69 +22,75 @@ def LoginView(request):
     if request.method == 'POST':
         username = request.POST['mail']
         password = request.POST['passwd']
-        user = auth.authenticate(username = username, password =password)
+        user = auth.authenticate(username=username, password=password)
         print(username, password)
         if user is not None:
             if user.is_staff == True:
-                auth.login(request , user)
+                auth.login(request, user)
                 return redirect('/admin')
-            auth.login(request , user)
+            auth.login(request, user)
             messages.success(request, 'Welcome Back, Logged In Succeessfully')
             return redirect('/')
         else:
-            context= {'Error':'INVALID CREDENTIALS','Sign':' X'}
+            context = {'Error': 'INVALID CREDENTIALS', 'Sign': ' X'}
             return render(request, 'Rentals/login.html', context)
     else:
-        return render(request,'Rentals/login.html')
+        return render(request, 'Rentals/login.html')
+
 
 def Register(request):
     if request.method == 'POST':
-        fname=request.POST['fname']
-        lname=request.POST['lname']
+        fname = request.POST['fname']
+        lname = request.POST['lname']
         email = request.POST['mail']
         usern = request.POST['username']
-        password1= request.POST['password1']
-        password2= request.POST['password2']
-        if password1==password2:
+        password1 = request.POST['password1']
+        password2 = request.POST['password2']
+        if password1 == password2:
             password = password1
         else:
-            context= {'Error':'Passwords does not match','Sign':' X'}
+            context = {'Error': 'Passwords does not match', 'Sign': ' X'}
             return render(request, 'Rentals/register.html', context)
         date = datetime.date.today()
         try:
-            user= User.objects.get(username=usern)
-            context= {'Error':'The username already taken. Please try another username.','Sign':' X'}
+            user = User.objects.get(username=usern)
+            context = {
+                'Error': 'The username already taken. Please try another username.', 'Sign': ' X'}
             return render(request, 'Rentals/register.html', context)
         except User.DoesNotExist:
             try:
-                user= User.objects.get(email=email)
-                context= {'Error':'The email already taken. Please try another email.','Sign':' X'}
+                user = User.objects.get(email=email)
+                context = {
+                    'Error': 'The email already taken. Please try another email.', 'Sign': ' X'}
                 return render(request, 'Rentals/register.html', context)
             except User.DoesNotExist:
-                user = User.objects.create_user(first_name = fname, last_name = lname, username = usern , password = password , email = email, date_joined = date)
+                user = User.objects.create_user(
+                    first_name=fname, last_name=lname, username=usern, password=password, email=email, date_joined=date)
         user.save()
         html_message = render_to_string('Rentals/welcome.html')
         plain_message = strip_tags(html_message)
         sub = 'Hey'+" "+fname+' Welcome to Taxies 24 Hrs'
         mail = EmailMultiAlternatives(
-                #subject
+            # subject
             sub,
-                #content
+            # content
             plain_message,
-                #from email
+            # from email
             'taxies24hr@gmail.com',
-                #reciepents
+            # reciepents
             [email]
-            )
+        )
         mail.attach_alternative(html_message, "text/html")
         mail.send()
         print('user created')
         return redirect('/login')
-    return render(request,'Rentals/register.html')
+    return render(request, 'Rentals/register.html')
+
 
 def LoginOut(request):
     logout(request)
     return redirect('/login')
+
 
 def BookingHistory(request):
     if request.user.is_authenticated:
@@ -90,8 +98,8 @@ def BookingHistory(request):
             travel_list = BookedForLater.objects.all()
         else:
             username = request.user.username
-            travel_list = BookedForLater.objects.filter(user_name = username)
-        return render(request, 'Rentals/history.html', {'travel_list':travel_list})
+            travel_list = BookedForLater.objects.filter(user_name=username)
+        return render(request, 'Rentals/history.html', {'travel_list': travel_list})
     messages.error(request, 'Please, Login First!')
     return redirect('/')
 
@@ -102,38 +110,41 @@ def QuickBookingHistory(request):
             travel_list = RidesRightNow.objects.all()
         else:
             username = request.user.username
-            travel_list = RidesRightNow.objects.filter(user_name = username)
-        return render(request, 'Rentals/quickhistory.html', {'travel_list':travel_list})
+            travel_list = RidesRightNow.objects.filter(user_name=username)
+        return render(request, 'Rentals/quickhistory.html', {'travel_list': travel_list})
     messages.error(request, 'Please, Login First!')
     return redirect('/')
+
 
 def home(request):
     return render(request, 'Rentals/home.html')
 
+
 def AboutUs(request):
     return render(request, 'Rentals/about.html')
+
 
 def Forgot(request):
     if request.method == 'POST':
         email = request.POST['email']
         try:
-            user= User.objects.get(email=email)
-            email=request.POST['email']
-            u = User.objects.get(email = email)
-            o=generateOTP()
+            user = User.objects.get(email=email)
+            email = request.POST['email']
+            u = User.objects.get(email=email)
+            o = generateOTP()
             u.set_password(o)
             u.save()
-            context= {'otp':o}
+            context = {'otp': o}
             html_message = render_to_string('Rentals/otpemail.html', context)
             plain_message = strip_tags(html_message)
             mail = EmailMultiAlternatives(
-                #subject
+                # subject
                 'OTP VERIFICATION',
-                #content
+                # content
                 plain_message,
-                #from email
+                # from email
                 'taxies24hr@gmail.com',
-                #reciepents
+                # reciepents
                 [email]
             )
             mail.attach_alternative(html_message, "text/html")
@@ -142,11 +153,13 @@ def Forgot(request):
             return redirect('/passreset')
         except User.DoesNotExist:
             messages.error(request, ' User Does not exixst...')
-    return render(request,'Rentals/forgot.html')
-def generateOTP() :
+    return render(request, 'Rentals/forgot.html')
+
+
+def generateOTP():
     digits = "0123456789"
     OTP = ""
-    for i in range(4) :
+    for i in range(4):
         OTP += digits[math.floor(random.random() * 10)]
     return OTP
 
@@ -164,17 +177,18 @@ def generateOTP() :
 #               )
 #     print("Sent")
 #     return redirect('/passreset')
-    
+
+
 def PassReset(request):
     if request.method == 'POST':
         uname = request.POST['uname']
         otp = request.POST['otp']
         pass0 = request.POST['pass']
         pass1 = request.POST['pass1']
-        user = auth.authenticate(username = uname, password =otp)
+        user = auth.authenticate(username=uname, password=otp)
         if user is not None:
-            if pass0==pass1:
-                u = User.objects.get(username = uname)
+            if pass0 == pass1:
+                u = User.objects.get(username=uname)
                 u.set_password(pass0)
                 u.save()
                 messages.success(request, 'Password changed Successfully...')
@@ -183,7 +197,8 @@ def PassReset(request):
             messages.error(request, 'Passwords mismatch')
         else:
             messages.error(request, 'Invalid Username or OTP')
-    return render(request,'Rentals/passreset.html')
+    return render(request, 'Rentals/passreset.html')
+
 
 def Ridenow(request):
     if request.user.is_authenticated:
@@ -195,15 +210,18 @@ def Ridenow(request):
             phone = request.POST['o_phone']
             booking = datetime.datetime.today()
             print(srce, dest, type, phone, booking)
-            if srce == '' or dest == '' or len(phone)!=10:
+            if srce == '' or dest == '' or len(phone) != 10:
                 messages.error(request, 'Enter All Fields Properly')
             else:
-                ride = RidesRightNow(user_name = username, source = srce, destination = dest, cartype = type, phone = phone)
+                ride = RidesRightNow(
+                    user_name=username, source=srce, destination=dest, cartype=type, phone=phone)
                 ride.save()
-                messages.success(request, 'Congratulations, Your cab will be arriving soon!')
+                messages.success(
+                    request, 'Congratulations, Your cab will be arriving soon!')
         return render(request, 'Rentals/OnTheGo.html')
     messages.error(request, 'Please, Login First!')
     return redirect('/')
+
 
 def Ridelater(request):
     if request.user.is_authenticated:
@@ -217,18 +235,21 @@ def Ridelater(request):
             phone = request.POST['s_phone']
             booking = datetime.datetime.today()
             print(srce, dest, sdate, stime, type, phone, booking)
-            if srce == '' or dest == '' or sdate == '' or stime == '' or len(phone)!=10:
+            if srce == '' or dest == '' or sdate == '' or stime == '' or len(phone) != 10:
                 messages.error(request, 'Enter All Fields Properly')
             else:
-                ride = BookedForLater(user_name = username, source = srce, destination = dest,date = sdate,time = stime, cartype = type, phone = phone)
+                ride = BookedForLater(user_name=username, source=srce, destination=dest,
+                                      date=sdate, time=stime, cartype=type, phone=phone)
                 ride.save()
-                confirmmail(request, srce,dest)
-                messages.success(request, 'Congratulations, Your cab has booked')
+                confirmmail(request, srce, dest)
+                messages.success(
+                    request, 'Congratulations, Your cab has booked')
         return render(request, 'Rentals/schedule.html')
     messages.error(request, 'Please, Login First!')
     return redirect('/')
 
-def confirmmail(request,srce,dest):
+
+def confirmmail(request, srce, dest):
     email = request.user.email
     print(email)
     digits = "6789"
@@ -236,17 +257,17 @@ def confirmmail(request,srce,dest):
     for i in range(3):
         price += digits[math.floor(random.random() * 4)]
     # msg = "Source: "+str(srce)+"\n"+"Destination: "+str(dest)+"\n"+"Date of travel: "+str(sdate)+"\n"+"Time: "+str(stime)+"\n"
-    context= {'source':srce,'destination':dest, 'price':price}
+    context = {'source': srce, 'destination': dest, 'price': price}
     html_message = render_to_string('Rentals/confirmemail.html', context)
     plain_message = strip_tags(html_message)
     mail = EmailMultiAlternatives(
-        #subject
+        # subject
         'RIDE CONFIRMATION',
-        #content
+        # content
         plain_message,
-        #from email
+        # from email
         'taxies24hr@gmail.com',
-        #reciepents
+        # reciepents
         [email]
     )
     mail.attach_alternative(html_message, "text/html")
@@ -258,18 +279,18 @@ def confirmmail(request,srce,dest):
     #           fail_silently=False,
     #           )
     return print("Mail Sent")
-    
+
 
 def Feedback(request):
     if request.method == "POST":
-        comment=request.POST.get('comment')
-        user=request.user
-        comment=FeedbackDB(comment= comment, user=user)
+        comment = request.POST.get('comment')
+        user = request.user
+        comment = FeedbackDB(comment=comment, user=user)
         comment.save()
         messages.success(request, "Your comment has been posted successfully")
-    comments= FeedbackDB.objects.all().order_by('sno').reverse()
-    context={'comments': comments, 'user': request.user}
-    return render(request,'Rentals/blog.html', context)
+    comments = FeedbackDB.objects.all().order_by('sno').reverse()
+    context = {'comments': comments, 'user': request.user}
+    return render(request, 'Rentals/blog.html', context)
 
 
 def delete(request, id):
@@ -280,15 +301,15 @@ def delete(request, id):
         html_message = render_to_string('Rentals/cancel.html')
         plain_message = strip_tags(html_message)
         mail = EmailMultiAlternatives(
-        #subject
-        'RIDE CANCELLATION',
-        #content
-        plain_message,
-        #from email
-        'taxies24hr@gmail.com',
-        #reciepents
+            # subject
+            'RIDE CANCELLATION',
+            # content
+            plain_message,
+            # from email
+            'taxies24hr@gmail.com',
+            # reciepents
             [email]
-        )   
+        )
         mail.attach_alternative(html_message, "text/html")
         mail.send()
         messages.success(request, "Ride deleted succesfully")
@@ -296,6 +317,7 @@ def delete(request, id):
     else:
         messages.error(request, "Please Login first")
         return redirect('/')
+
 
 def delete1(request, id):
     if request.user.is_authenticated:
@@ -305,15 +327,15 @@ def delete1(request, id):
         html_message = render_to_string('Rentals/cancel.html')
         plain_message = strip_tags(html_message)
         mail = EmailMultiAlternatives(
-        #subject
-        'RIDE CANCELLATION',
-        #content
-        plain_message,
-        #from email
-        'taxies24hr@gmail.com',
-        #reciepents
+            # subject
+            'RIDE CANCELLATION',
+            # content
+            plain_message,
+            # from email
+            'taxies24hr@gmail.com',
+            # reciepents
             [email]
-        )   
+        )
         mail.attach_alternative(html_message, "text/html")
         mail.send()
         messages.success(request, "Ride deleted succesfully")
