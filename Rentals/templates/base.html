@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>{% block title %}{% endblock title %}</title>
+    <script src="https://kit.fontawesome.com/1deaab12ff.js" crossorigin="anonymous"></script>
     <link rel="icon" type="image" href="/static/styles/Images&Gifs/taxi.png" />
     <link rel="stylesheet" href="/static/styles/homestyle.css" />
     <link rel="stylesheet" href="/static/styles/about.css" />
@@ -32,7 +33,7 @@
     <nav class="navbar navbar-expand-lg" id="myHeader">
       <div class="container-fluid">
         <a class="navbar-brand" href="/"
-          >Taxies<span>24</span>Hrs</a>
+          ><h1><i class="fa fa-cog fa-spin fa-3x fa-fw" aria-hidden="true"></i>Taxies<span>24</span>Hrs</h1></a>
         <button
           class="navbar-toggler"
           type="button"
@@ -46,55 +47,55 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
           <ul class="navbar-nav me-auto mb-1 mb-lg-0">
-            <li class="nav-item">
+            <li class="nav-item hover-underline-animation">
               <a class="nav-link active" aria-current="page" href="/"
                 ><b>HOME</b></a
               >
             </li>
             &nbsp;
-            <li>
-              <a class="nav-link active" href="/ridenow"><b>BOOK NOW</b></a>
+            <li class="hover-underline-animation">
+              <a class="nav-link active " href="/ridenow"><b>BOOK NOW</b></a>
             </li>
             &nbsp;
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/schedule"><b>SCHEDULE</b></a>
             </li>
             &nbsp;
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/feedback"><b>FEEDBACKS</b></a>
             </li>
             &nbsp; {% if user.is_authenticated %}
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="https://rzp.io/l/eddJGwQJc"
                 ><b>PAYMENTS</b></a
               >
             </li>
             {% else %}
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href=""><b>PAYMENTS</b></a>
             </li>
             {% endif %} &nbsp;
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/quickhistory"
                 ><b>QUICK HISTORY</b></a
               >
             </li>
             &nbsp;
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/history"
                 ><b>SCHEDULED HISTORY</b></a
               >
             </li>
             &nbsp;
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/aboutus"><b>ABOUT US</b></a>
             </li>
             &nbsp; {% if user.is_authenticated %}
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/loginout"><b>LOG OUT</b></a>
             </li>
             {% else %}
-            <li>
+            <li class="hover-underline-animation">
               <a class="nav-link active" href="/loginout"><b>LOG IN</b></a>
             </li>
             {% endif %}

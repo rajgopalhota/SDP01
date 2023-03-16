@@ -18,8 +18,7 @@ html {
   scroll-behavior: smooth;
 }
 #myHeader {
-  
-  background-color: rgba(68, 184, 230, 0.073);
+  background-image: linear-gradient(to top, #f3e7e97d 0%, #e3eeff7a 99%, #e3eeff70 100%);
   box-shadow: 0 0 27px rgb(65, 65, 65);
   width: 100%;
   padding: 12px 16px;
@@ -28,7 +27,7 @@ html {
   border-bottom: 2px solid rgb(59, 59, 59);
 }
 #myHeader:hover {
-  box-shadow: 0 0 28px rgba(5, 5, 5, 0.836);
+  box-shadow: 0 0 28px rgba(27, 26, 26, 0.836);
 }
 body {
   margin: 0;
@@ -41,28 +40,45 @@ body {
   margin-right: 0;
 }
 .navbar li {
+  text-align: center;
   display: inline-block;
-  font-size: 20px;
-  background-color: rgba(255, 224, 68, 0.854);
-  border-radius: 50px;
-  border: 2px solid rgba(0, 163, 46, 0.906);
 }
-.navbar-brand{
+.navbar-brand h1{
+  letter-spacing: 1px;
   font-size: 24px;
   font-weight: 750;
   text-shadow: 0 0 6px white;
+}
+.navbar-brand i{
+  font-size: 24px;
 }
 .navbar-brand span{
   letter-spacing: 2px;
   font-size: 26px;
   color: orange;
-  text-shadow: 0 0 12px black;
+  text-shadow: 0 0 2px black;
 }
-.navbar li:hover {
-  box-shadow: 0 0 34px #15f7a1;
-  background-color: rgb(81, 130, 176);
-  border: 2px solid rgba(255, 255, 255, 0.906);
-  color: aliceblue;
+.hover-underline-animation {
+  display: inline-block;
+  position: relative;
+}
+
+.hover-underline-animation:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 4px;
+  bottom: 0;
+  left: 0;
+  background-color: #ffffff;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.hover-underline-animation:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
 }
 .navbar li a {
   text-decoration: none;
